@@ -1,0 +1,1140 @@
+# Changelog — Ugreen NAS Admin
+
+## 23.8.78 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.78.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- Auf dem Mac heißt der eigene Rechner „Mac“ bzw. „Dieser Mac“. Texte wie „dieser PC“, „Auf PC kopieren“ und „PC-Ordner“ sind angepasst. Unter Windows bleibt „PC“.
+
+### English
+
+- On the Mac, this computer is called “Mac” or “This Mac”. Phrases such as “this PC”, “Copy to PC”, and “PC folder” follow that. The Windows build still says “PC”.
+
+## 23.8.77 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.77.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- Knöpfe malen auf dem Mac ihre Fläche selbst. „Plan“ im Aufgabenplaner und „Übernehmen“ bei der Sprache bleiben im hellen Theme lesbar, genauso die übrigen früheren Systemknöpfe. Helle Schrift auf heller Fläche wird automatisch dunkel gestellt.
+
+### English
+
+- On the Mac, buttons paint their own background. “Plan” in the scheduler and “Apply” for the language stay readable in the light theme, as do the other former system buttons. Light text on a light face is switched to dark text.
+
+## 23.8.76 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.76.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- Gleiche Schlüsselbund-Logik wie 23.8.75. Nur die Versionsnummer ist höher, damit der Installer die App wirklich ersetzt und sich prüfen lässt, ob der Start noch nach dem Anmeldepasswort fragt.
+
+### English
+
+- Same Keychain behavior as 23.8.75. Only the version number is higher, so the installer actually replaces the app and the startup prompt can be checked.
+
+## 23.8.75 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.75.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- Der Start fragt den Schlüsselbund nicht mehr für jedes gespeicherte Geheimnis einzeln. SSH-Passwort und, falls eingerichtet, das Telegram-Token können beim ersten Start dieser Version noch je einmal kommen. Mail und das zweite NAS erst, wenn diese Funktion benutzt wird. Danach liegen die gelesenen Werte in einem Eintrag, den Programme auf diesem Mac lesen dürfen, solange du angemeldet bist. Die nächste Installation fragt dieselben Werte nicht erneut.
+
+### English
+
+- Startup no longer asks the Keychain once per stored secret. The SSH password and, if Telegram is set up, the bot token may each appear once on the first launch of this version. Mail and the second NAS are asked only when that function is used. Read values are then kept in one entry that programs on this Mac may read while you are logged in, so the next install does not ask for the same values again.
+
+## 23.8.74 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.74.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- Scrollen mit Maus und Trackpad legt einen deutlich längeren Weg zurück. Die Leiste ist breiter und lässt sich leichter greifen. Ist eine innere Liste am Ende, scrollt die Seite darunter weiter.
+
+### English
+
+- Mouse and trackpad scrolling moves farther. The scrollbar is wider and easier to grab. When an inner list is already at its end, the page behind it keeps scrolling.
+
+## 23.8.73 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.73.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- Die Oberfläche nutzt eine lesbarere Schrift (auf dem Mac Helvetica Neue, Festbreit Menlo) und ist durchgängig zwei Punkt größer. Listenzeilen sind etwas höher, damit die Schrift nicht abgeschnitten wird.
+
+### English
+
+- The UI uses a more readable typeface (Helvetica Neue and Menlo on macOS) and is two points larger throughout. List rows are a little taller so the text is not clipped.
+
+## 23.8.72 — 2026-11-09
+
+Installer: `UgreenNASAdmin_setup_23.8.72.pkg` (macOS). Eine vorhandene `UgreenNASAdmin.app` auf dem Schreibtisch oder in `~/Applications` wird dabei ersetzt.
+
+## Sprachen — 2026-11-09
+
+### Deutsch
+
+- Die deutsche Oberfläche benutzt deutsche Bezeichnungen: Einstellungen, Übersicht, Skripte, Dateien, Systemzustand, Anmeldungen, Schnappschüsse, Hell/Dunkel, Benutzer, Kaffee.
+- In den Einstellungen haben die Sprachauswahl und der Übernehmen-Knopf eine Beschriftung.
+- Kroatisch, Französisch, Spanisch, Italienisch, Polnisch, Russisch, Türkisch, Koreanisch und Chinesisch erhalten die bisher fehlenden Sätze. „Wochentag“, helles/dunkles Design, Skripte, Dateien und Kaffee sind keine falschen Wörter mehr.
+
+### English
+
+- The German UI now uses German labels (Settings, Overview, Scripts, Files, System health, Logins, Snapshots, Light/Dark, User, Coffee).
+- The language picker and its apply button in Settings have a caption.
+- Croatian, French, Spanish, Italian, Polish, Russian, Turkish, Korean, and Chinese receive the strings that were missing. Weekday, light/dark theme, scripts, files, and coffee no longer use the wrong words.
+
+## Mac — 2026-11-08
+
+### Deutsch
+
+- **Schlüsselbund:** SSH-Passwort und Key-Passphrase liegen im Anmelde-Schlüsselbund. Jeder Wert wird pro App-Start nur einmal gelesen, damit macOS nicht bei jedem Dashboard-Takt erneut nach dem Anmeldepasswort fragt.
+- **SSH-Status:** Der Punkt oben wird grün, sobald eine SSH-Sitzung zum NAS steht, und nicht mehr rot, nur weil der Test den Schlüsselbund nicht angefasst hat.
+- **Screenshots:** Ein Windows-Pfad wie `C:\Users\…\Pictures\…` wird zu `~/Pictures/` mit demselben Ordnernamen.
+- **Einstellungen:** Liegen unter `~/Library/Application Support/UgreenNASAdmin`, nicht mehr im Programm-Bundle. Ein Speichern legt den SSH-Status nicht auf Rot, solange die Sitzung steht.
+- **Windows-Reste:** Ein SSH-Key-Pfad wie `C:\…` wird nicht übernommen. Den PowerShell-Knopf gibt es in der Mac-App nicht.
+
+### English
+
+- **Keychain:** The SSH password and key passphrase stay in the login Keychain. Each value is read once per launch, so macOS does not ask for the login password on every dashboard refresh.
+- **SSH status:** The dot turns green when an SSH session to the NAS is up. It no longer stays red just because the check skipped the Keychain.
+- **Screenshots:** A Windows path such as `C:\Users\…\Pictures\…` becomes `~/Pictures/` with the same folder name.
+- **Settings:** Stored in `~/Library/Application Support/UgreenNASAdmin`, not inside the app bundle. Saving does not turn the SSH status red while a session is up.
+- **Windows leftovers:** An SSH key path such as `C:\…` is dropped. The Mac app has no PowerShell button.
+
+## Werkzeuge — 2026-11-06
+
+### Deutsch
+
+- **Mac Build Studio:** Neue App unter `tools/mac_build_studio/`. Auf macOS reicht ein Doppelklick auf `Mac Build Studio.app`, ohne Terminal. Sie installiert Python 3.12, die Pakete und die Xcode-Befehlszeilen und baut Ugreen NAS Admin sowie Ugreen NAS Admin Pro als `.app`. Der Windows-EXE-Build bleibt unverändert.
+- **Mac Build Studio:** **Projektordner wählen** sucht die Bau-Dateien im angegebenen Ordner, auch unter `ugreen nas admin` im Benutzerordner, und merkt sich die Auswahl.
+
+### English
+
+- **Mac Build Studio:** New app at `tools/mac_build_studio/`. On macOS a double-click on `Mac Build Studio.app` opens the window, with no Terminal. It installs Python 3.12, the packages and the Xcode command line tools, then builds Ugreen NAS Admin and Ugreen NAS Admin Pro as `.app` bundles. The Windows EXE build is unchanged.
+- **Mac Build Studio:** **Choose project folder** looks for the build files in the selected folder, including `ugreen nas admin` in the user folder, and remembers that choice.
+
+## 23.8.71 — 2026-11-04
+
+Installer: `UgreenNASAdmin_setup_23.8.71.exe`.
+
+### Deutsch
+
+- **Get Pro:** Der Button **Was Pro kann** öffnet im Browser die englische Seite `docs/pro_features.html` mit dem kompletten Funktionsumfang von Ugreen NAS Admin Pro.
+
+### English
+
+- **Get Pro:** **What Pro can do** opens the English page `docs/pro_features.html` in the browser, listing everything Ugreen NAS Admin Pro can do.
+
+## UGOS-Apps — 2026-11-04
+
+### Deutsch
+
+- **Moving Files 0.2.0.0057:** Der Dienstport ist 29140. Port 21010 ist der Beispielport in der UGREEN-Doku und wurde bei der Prüfung als Konflikt abgelehnt.
+
+### English
+
+- **Moving Files 0.2.0.0057:** The service port is 29140. Port 21010 is the sample port in the UGREEN docs and was rejected as a conflict.
+
+## UGOS-Apps — 2026-11-03
+
+### Deutsch
+
+- **Moving Files 0.2.0.0056:** IP, MAC, SMB-Benutzer, Passwort, Archivpasswort und Geräte-ID gehen nur noch als RSA-OAEP-Chiffretext über den NAS-HTTP-Proxy; Klartext wird abgelehnt. Die Datenschutzerklärung nennt Zweck, Weg und Umfang inklusive NAS-LAN-Adresse, Rechtsgrundlage, Verantwortlichen, keine Weitergabe, Minderjährige, Rechte und das Datum 3. November 2026. Wake & Sync liest einen Home-Unterordner auch dann, wenn der UGOS-Shared-Mount leer oder nicht vorhanden ist und derselbe Ordner unter `/home` oder `/volumeN/@home` liegt.
+
+### English
+
+- **Moving Files 0.2.0.0056:** IP, MAC, SMB username, password, archive password and device ID are sent only as RSA-OAEP ciphertext on the NAS HTTP proxy; plaintext is rejected. The privacy policy states purpose, method and scope, including the NAS LAN address, legal basis, controller, no sale, minors, rights, and the 3 November 2026 date. Wake & Sync reads a home subfolder when the UGOS shared mount is empty or missing and the same folder exists under `/home` or `/volumeN/@home`.
+
+## Ugreen NAS Admin Pro — 2026-11-03
+
+### Deutsch
+
+- **Lizenzfenster:** Das erste Fenster ohne gültige Lizenz (Hinweis, Fingerprint-Text und die Buttons E-Mail/Telegram) ist immer Englisch, auch wenn der Installer auf Deutsch lief.
+
+### English
+
+- **License window:** The first window without a valid license (notice, fingerprint text, and the e-mail/Telegram buttons) is always English, even when the installer language was German.
+
+## UGOS-Apps — 2026-10-27
+
+### Deutsch
+
+- **Transporter 0.2.0.0020:** Unter Wichtiges wird der Zielordner im Baum angeklickt. Die Lüfterkurve bleibt nach einem Neustart aktiv; Haken weg und speichern gibt die Steuerung an UGOS zurück. Ein Testfeld setzt einen Prozentwert und zeigt die gemessene Drehzahl.
+
+### English
+
+- **Transporter 0.2.0.0020:** On Important, the destination folder is chosen in the tree. The fan curve stays on after a reboot; clearing the checkbox and saving hands control back to UGOS. A test field sets a percentage and shows the measured speed.
+
+## UGOS-Apps — 2026-10-27
+
+### Deutsch
+
+- **Transporter 0.2.0.0018:** Neuer Tab **Wichtiges**. Lüfterkurve in 1-%-Schritten für CPU, heißeste Festplatte oder beides (der höhere Wert gilt). Darunter eine manuelle Sicherung von Skripten, Home, Docker-Projekten und den Transporter-Einstellungen auf ein gespeichertes NAS oder einen PC. Kein Zeitplan.
+
+### English
+
+- **Transporter 0.2.0.0018:** New **Important** tab. Fan curve in 1% steps for CPU, the hottest disk, or both (the higher duty wins). Below that, a manual copy of scripts, home, Docker projects and the Transporter settings to a saved NAS or PC. No schedule.
+
+## UGOS-Apps — 2026-10-26
+
+### Deutsch
+
+- **Transfer Hub 0.6.40:** Lokale Quell- und Zielpfade werden beim Speichern eines Profils und direkt vor jedem Lauf geprüft. Jede aufgeklappte Route (auch der Zielpfad, der in `rsync` landet) muss nach Symlink-Auflösung im gewählten Volume bleiben (`/mnt/ugos` bzw. USB). Pfade außerhalb, inklusive `..` und Symlink-Ausbruch, werden abgelehnt.
+
+### English
+
+- **Transfer Hub 0.6.40:** Local source and destination paths are checked when a profile is saved and again immediately before every run. Each expanded route, including the destination path passed to `rsync`, must stay inside the selected volume after symlink resolution (`/mnt/ugos` or USB). Paths outside that root, including `..` and symlink escapes, are rejected.
+
+## UGOS-Apps — 2026-10-20
+
+### Deutsch
+
+- **Security Hub 0.1.22:** Beim ersten Start gibt es die Felder **Neu** und **Bestätigen**. Das einzelne Feld aus 0.1.21, das mit `Cannot read properties of null (reading 'value')` abbrach, ist entfernt. NAS-Admin-Felder erscheinen nur, wenn die App eine Installer-Bindung verlangt.
+
+### English
+
+- **Security Hub 0.1.22:** First launch shows **New** and **Confirm**. The single field from 0.1.21, which failed with `Cannot read properties of null (reading 'value')`, is gone. NAS administrator fields appear only when the app requires installer bind.
+
+## UGOS-Apps — 2026-10-14
+
+Drei Ordner-Grants ohne `multi:true` (ugcli-Bug) plus Login-Setup-Fix.
+
+### Deutsch
+
+- **Transfer Hub 0.6.39 / Wake & Sync 0.1.50:** Bei Installation und in der App-Config gibt es bis zu **drei** Ordnerfelder: `UGOS-Ordner` (pflicht) sowie optional **Weiterer UGOS-Ordner 2/3** (beliebiges Volume). Leer lassen, wenn nicht nötig.
+- **Login-Setup:** Beim ersten Passwort immer **Neu** und **Bestätigen**; NAS-Admin-Felder nur wenn Installer-Bind nötig. JS-Nullfehler bei fehlendem Confirm-Feld behoben.
+
+### English
+
+- **Transfer Hub 0.6.39 / Wake & Sync 0.1.50:** Install and app config offer up to **three** folder fields: required UGOS folder plus optional Extra UGOS folder 2/3 (any volume). Leave empty if unused.
+- **Login setup:** First password always shows **New** and **Confirm**; NAS admin fields only when installer bind is required. Fixed JS null error when Confirm was missing.
+
+## UGOS-Apps — 2026-10-09
+
+Sicherheitsnachzug für die drei gelisteten Apps. Die Windows-App bleibt **23.8.70**. UPK-Build folgt separat.
+
+### Deutsch
+
+- **Transfer Hub 0.6.36:** Lokale Quell- und Zielpfade bleiben nach `resolve()` im gewählten Volume (`/mnt/ugos` bzw. USB). `..` und Symlinks, die den Mount verlassen, werden beim Speichern und beim Start abgelehnt.
+- **Security Hub 0.1.21:** Login-Track schreibt Ereignisfelder als Text ins Dashboard. Ein Anmeldename aus einem fehlgeschlagenen UGOS-Login wird nicht mehr als HTML ausgeführt.
+- **Wake & Sync 0.1.46:** Das erste App-Passwort setzt nur eine Anmeldung als UGOS-Administrator. Ein LAN-Client ohne dieses Konto erhält keine Sitzung.
+- **Store-Text:** App-Beschreibungen verweisen auf **Technischer Support** und `runlevel1977@posteo.de`.
+
+### English
+
+- **Transfer Hub 0.6.36:** Local source and destination paths stay inside the selected volume after `resolve()` (`/mnt/ugos` or USB). `..` and symlinks that leave the mount are rejected when saving and when starting a profile.
+- **Security Hub 0.1.21:** Login Track writes event fields into the dashboard as text. A username from a failed UGOS sign-in is no longer executed as HTML.
+- **Wake & Sync 0.1.46:** The first app password requires a UGOS administrator sign-in. A LAN client without that account does not get a session.
+- **Store text:** App descriptions point to **Technical Support** and `runlevel1977@posteo.de`.
+
+## 23.8.70 — 2026-10-04
+
+Nacharbeit zu **23.8.69**, aus dem Integrationscommit `d80f843`. Installer: `UgreenNASAdmin_setup_23.8.70.exe`.
+
+### Deutsch
+
+- **Öffentliche Tests (#27):** Secret- und TLS-Regressionstests bleiben in der Exportliste. Zwei rein private Route-Tests (Transfer Hub, Wake & Sync) bleiben davon ausgenommen.
+- **TAR-Restore (#28):** Wiederherstellung nur in einen **neuen, noch nicht vorhandenen** Zielordner. Bestehende Daten werden nicht ersetzt. Der Ordner ist zunächst privat.
+- **Backup-Vertrag (#29):** Ein Backup gilt nur als erfolgreich, wenn dasselbe Archiv den eigenen Restore-Prüfer besteht. Hardlinks werden als normale Dateiinhalte gespeichert (`--hard-dereference`).
+- **Upload-Metadaten (#30):** Einzel- und ZIP-Upload behalten unterstützte ACLs/xattrs. Unbekannte Sicherheitsattribute brechen den Austausch ab; das Original bleibt. Ersetzt den 23.8.69-Hinweis, unbekannte xattrs still zu überspringen.
+- **Release-Bindung (#31):** Öffentliche Pakete und Signaturen brauchen ein geprüftes `BUILD_MANIFEST` und denselben öffentlichen Tag. `--local-dist` packt nicht mehr.
+- **Docker-Schreiber (#32):** Manuelle Backups und nichtleere Zeitpläne fragen die Grenze ab. Laufende Container mit schreibendem Mount blockieren den Erfolg. Bestehende NAS-Zeitpläne einmal neu synchronisieren. Eine Live-Abnahme auf dem NAS bleibt offen.
+
+### English
+
+Follow-up to **23.8.69**, taken from integration commit `d80f843`. Installer: `UgreenNASAdmin_setup_23.8.70.exe`.
+
+- **Public tests (#27):** vault and TLS regression tests stay on the export list. Two private-only route tests (Transfer Hub, Wake & Sync) stay excluded.
+- **TAR restore (#28):** recovery only into a **new folder that does not exist yet**. Existing data is left in place. The folder starts private.
+- **Backup contract (#29):** a backup succeeds only when the same archive passes the app's own restore check. Hardlinks are stored as regular file contents (`--hard-dereference`).
+- **Upload metadata (#30):** single-file and ZIP uploads keep supported ACLs/xattrs. Unknown security attributes abort replacement and keep the original. This replaces the 23.8.69 note that skipped unknown xattrs.
+- **Release binding (#31):** public packages and signatures require a verified `BUILD_MANIFEST` and the same public tag. `--local-dist` no longer packs a release.
+- **Docker writers (#32):** manual backups and non-empty schedules ask for this limit. Running containers with a writable mount block success. Re-sync existing NAS schedules once. Live NAS acceptance is still open.
+
+## 23.8.69 — 2026-10-03
+
+Sicherheits- und Release-Härtung aus den öffentlichen Review-PRs **#16–#26** (lokal integriert und getestet). Installer: `UgreenNASAdmin_setup_23.8.69.exe`.
+
+### Deutsch
+
+**Vertrauen & Transport**
+- **UGOS-TLS-Erstkontakt (#24):** Unbekanntes Zertifikat nur nach Fingerprint-Vergleich und ausdrücklicher Bestätigung pinnen; Ablehnung/Timeout → Abbruch.
+- **Transport-Policy (#25):** UGOS-API nur per HTTPS; SMTP-Zugangsdaten nur mit SSL/STARTTLS (kein Klartext-Fallback).
+- **OS-Tresor (#22):** weitere Geheimnisse im System-Keyring; Settings atomar; private Windows-ACLs auf Konfig-/Schlüsseldateien.
+- **Update-Download (#21):** Ziel/Redirect/Größe geprüft; Installer und Version in **signierter Metadaten** gebunden (neben SHA-256 und `.sig`).
+
+**NAS-Schreiben & Backup**
+- **Root-Dateien (#18):** Payload über stdin, feste Verzeichnisdeskriptoren, SSH-Ausgabebegrenzung.
+- **Backup-Generationen (#16):** private Generationen unter Sperre, atomare Cron-Aktivierung.
+- **Atomic Upload (#20):** Ziel erst nach vollständig verifiziertem Transfer; UGOS-fremde xattrs werden übersprungen statt den Upload zu blockieren.
+- **Archiv-Restore (#19):** Ressourcengrenzen, Metadatenprüfung, atomare Einzeldateien; vorhandene UGOS-ACLs/xattrs am Ziel **blockieren den Restore nicht** (werden weiterhin nicht wiederhergestellt).
+
+**NAS-Verwaltung & Release**
+- **SSH-Profil-Rückfall (#26):** systemd-Timer **vor** Drop-in-Wechsel; Bestätigung nur nach neuer SSH-Verbindung; wirksame Algorithmen gegen `sshd -T`; Admin-Configs (earlyoom/Samba/Shutdown) abgesichert.
+- **Release-Gerüst (#23):** Source-Export ohne private Runtime-Dateien, Artefakt-Inventur, Offline-Sicherheits-CI — **ohne** Authenticode und ohne fertige Build-Lock-Dateien (Maintainer-Nacharbeit).
+- **CI-Nachzug:** `tests/run_offline_suite.py` und benötigte Offline-Fixtures im öffentlichen Sync; `deep-translator` aus dem Release-Lock entfernt (nur Handbuch-Übersetzung, unfixierte Advisory); Windows-CI: Kurzpfad-/SDDL-Alias-False-Positives in Backup- und ACL-Tests behoben.
+
+### English
+
+Security and release hardening from public review PRs **#16–#26** (integrated and tested locally). Installer: `UgreenNASAdmin_setup_23.8.69.exe`.
+
+**Trust & transport**
+- **UGOS TLS first contact (#24):** pin unknown certs only after fingerprint check and explicit confirmation.
+- **Transport policy (#25):** UGOS API HTTPS-only; SMTP credentials require SSL/STARTTLS.
+- **OS vault (#22):** more secrets in the OS keyring; atomic settings; private Windows ACLs.
+- **Update download (#21):** destination/redirect/size checks; installer and version bound in **signed metadata**.
+
+**NAS writes & backup**
+- **Root files (#18):** stdin payloads, directory-descriptor binding, SSH output limits.
+- **Backup generations (#16):** private generations under a lock; atomic cron activation.
+- **Atomic upload (#20):** publish only after verified transfer; skip unsupported UGOS xattrs instead of failing.
+- **Archive restore (#19):** resource bounds and metadata checks; existing UGOS ACLs/xattrs no longer hard-fail restore (still not restored).
+
+**NAS admin & release**
+- **SSH profile recovery (#26):** arm systemd timer before drop-in change; confirm only after a new SSH connection; verify effective algorithms via `sshd -T`.
+- **Release scaffolding (#23):** clean source export, artifact inventory, security CI — **without** Authenticode or final build lock files.
+- **CI follow-up:** ship `tests/run_offline_suite.py` and required offline fixtures in the public sync; drop `deep-translator` from the release lock (handbook translation only; unfixed advisory); Windows CI: fix short-path / SDDL-alias false positives in backup and ACL checks.
+
+## 23.8.57 — 2026-10-01
+
+Großes Sicherheits-Update. Wer von **≤ 23.8.48** kommt, bekommt mit dieser Version den gesamten heutigen Stand (23.8.49–57): Vertrauensprüfung für SSH und UGOS, Keyring, Danger-Lock, atomare Root-Dateien, private Runner-Pfade und die Review-Punkte zu Backup/Restore und Shell.
+
+### Deutsch
+
+**Kritisch — Disk-Restore**
+- NAS-Restore per `gzip | dd`: **`pipefail`** und Prüfung des echten SSH-Exitcodes.
+- Früher konnte gzip abbrechen, `dd` trotzdem mit Exit 0 enden und die App „Restore fertig“ melden — bei **teilweise überschriebener Platte**. Das ist behoben.
+- Disk-Image schreiben: fail-closed (`set -e`, sicheres `mkdir`); Ziel nur unter `/volumeN/…` oder typischen USB-Mounts (`/mnt`, `/media`).
+- Image-Quelle für Restore: dieselben Allowlists, kein `/dev/…` als „Image-Datei“.
+
+**Backup — manuell und geplant**
+- Vor dem Schreiben: Mount-/Dateisystem-Identität (Preflight); nach `tar` erneut geprüft.
+- Archiv nur veröffentlicht bei **tar-Exit 0** und nichtleerer Datei — kein Erfolg bei kaputtem/teilweisem Archiv.
+- **Keine** automatische Löschung älterer Archive mehr über Dateinamen-Präfix (fremde/parallele Jobs bleiben erhalten).
+- Cron- und Job-Felder werden **komplett validiert, bevor** Runner, JSON oder `/etc/cron.d` als root geschrieben werden.
+- Geplante Backups und Runner liegen unter **`/var/lib/ugreen-nas-admin/`** (nicht mehr unter `/volume1/scripts/`).
+- Archiv-Restore: ein `tar -xf` (kein `||`-Zweitversuch über halb extrahierte Bäume); Zielpfad-Allowlist; echter Exit-Status in der UI.
+- Manuelles Backup ohne `__UG_BACKUP_FILE__`-Marker → klarer Fehler, nicht „unbekannt fertig“.
+
+**Vertrauen & Geheimnisse** (ergänzt 23.8.49–51)
+- SSH-Hostkey-Store und UGOS-TLS-Store: unlesbar/kaputt → **Abbruch**, kein stiller „Erstkontakt“.
+- UGOS-API: **keine** HTTP-Redirects (auch nicht HTTPS→HTTP); Peer-Zertifikat wird gegen den gespeicherten Pin geprüft.
+- Keyring: Klartext-Passwörter/Passphrasen verschwinden aus der JSON erst, wenn der Vault-Schreibvorgang **wirklich** gelingt.
+
+**Shell, Pfade, Upload** (ergänzt 23.8.52–56)
+- Skriptnamen: kein stilles Umwandeln von `../x.sh` → `x.sh`; Cron lehnt `%` im Namen ab.
+- Docker-Jobnamen mit Hash (keine Kollision `a+b` / `a_b`); härteres Quoting für Migration/rsync, ZFS-Snapshots, Docker-Mounts (JSON).
+- Upload: `chown` nur für **neu angelegte** Ordnerkomponenten (23.8.56); Symlinks abgelehnt.
+- Root-Dateien atomar (Staging + Hash + `os.replace` als root-Inode).
+
+**Hinweis nach dem Update**
+1. Watch / Daily Report / Script-Notify / geplante Backups einmal **neu aufs NAS** schreiben.
+2. Cron prüfen: Pfade müssen `/var/lib/ugreen-nas-admin/…` nutzen, nicht `/volume1/scripts/ugreen_…`.
+3. Eigene Skripte bleiben unter `/volume1/scripts/` — die App-Helfer bewusst nicht.
+
+### English
+
+Major security release. Upgrading from **≤ 23.8.48** includes everything from today’s 23.8.49–57 train: SSH/UGOS trust, keyring, danger lock, atomic root writes, private runner paths, and review fixes for backup/restore and shell safety.
+
+**Critical — disk restore**
+- NAS `gzip | dd` restore uses **`pipefail`** and the real SSH exit code.
+- Previously gzip could fail while `dd` still exited 0 and the UI said “restore done” with a **partially overwritten disk**. Fixed.
+- Disk image write is fail-closed; destinations limited to `/volumeN/…` or typical USB mounts (`/mnt`, `/media`).
+
+**Backup — manual and scheduled**
+- Mount/filesystem identity preflight (and re-check after tar).
+- Publish only on tar exit **0** and a non-empty archive.
+- No automatic prune of older archives by filename prefix.
+- Full cron/job validation **before** any root writes; state under **`/var/lib/ugreen-nas-admin/`**.
+- Archive restore: single `tar -xf`, path allowlist, real exit status; missing archive marker → failure.
+
+**Trust & secrets** (builds on 23.8.49–51)
+- Corrupt SSH/TLS stores fail closed (no silent first-contact).
+- UGOS API rejects redirects; peer certificate pin checked.
+- Keyring clears JSON secrets only after a successful vault write.
+
+**Shell, paths, upload** (builds on 23.8.52–56)
+- No silent `../` script aliasing; hashed Docker job names; tighter rsync/ZFS/Docker quoting.
+- Upload `chown` only for newly created path components; atomic root file publication.
+
+**After updating**
+Redeploy Watch / Daily Report / Script-Notify / scheduled backups once, and confirm cron lines use `/var/lib/ugreen-nas-admin/…`.
+
+## 23.8.56 — 2026-10-01
+
+### Deutsch
+
+- **Upload (PR #9):** `chown` nur für **neu angelegte** Ordnerkomponenten; bestehende Eigentümer bleiben; Symlinks → Abbruch.
+- **Root-Schreiben (PR #8):** privilegierte Dateien **atomar** als root-Inode (Staging + Hash-Check + `os.replace`).
+- **Private Helfer:** Watch, Daily Report, Script-Notify und geplante-Backup-Runner unter **`/var/lib/ugreen-nas-admin/`** (nicht unter `/volume1/scripts/`).
+
+### English
+
+- **Upload (PR #9):** `chown` only for **newly created** path components; existing owners untouched; symlinks rejected.
+- **Root writes (PR #8):** privileged files published as **atomic** root-owned inodes.
+- **Private helpers:** Watch, Daily Report, Script-Notify, scheduled backup runners under **`/var/lib/ugreen-nas-admin/`**.
+
+## 23.8.55 — 2026-10-01
+
+### Deutsch
+
+- **Repo-Root:** Icons → **`assets/`**, Builder/Spec/`RUN_BUILDER.bat` → **`packaging/`**. Im Root bleiben README, Lizenz, Changelog, requirements und die Einstiegs-Module.
+
+### English
+
+- **Repo root:** Icons → **`assets/`**, builder/spec/`RUN_BUILDER.bat` → **`packaging/`**. Root keeps README, license, changelog, requirements, and entry modules.
+
+## 23.8.54 — 2026-10-01
+
+### Deutsch
+
+- **Repo-Struktur:** Handbücher und PDFs unter **`docs/`**; öffentliches Sync-Layout (`docs/`, `tests/`) aufgeräumt.
+- **CI:** Workflow unter `.github/workflows/ci.yml` vorbereitet (Push braucht Token mit `workflow`-Scope).
+
+### English
+
+- **Repo layout:** Handbooks/PDFs under **`docs/`**; cleaner public sync layout.
+- **CI:** Workflow prepared at `.github/workflows/ci.yml` (needs a token with `workflow` scope to push).
+
+## 23.8.53 — 2026-10-01
+
+### Deutsch
+
+- **Shell-Nachzug:** Skript löschen, Host-/Docker-Test und Docker-Logs mit sicheren Basenames/Quoting (Rest nach 23.8.52).
+- **UI/Handbuch:** Docker-Wizard-Texte auf `chmod 755` angeglichen.
+
+### English
+
+- **Shell follow-up:** Script delete, host/docker test, and docker logs use safe basenames/quoting.
+- **UI/handbook:** Docker wizard copy aligned to `chmod 755`.
+
+## 23.8.52 — 2026-10-01
+
+### Deutsch
+
+- **Shell:** Skriptnamen und Cron-Felder vor Root-/Shell-Befehlen validiert bzw. gequotet.
+- **Geplante Backups:** `tar`-Fehler ≠ Erfolg; fehlerhafte Archive verwerfen; ältere Backups nur nach verifiziertem Archiv löschen; Job-/Cron-Werte vor `/etc/cron.d` geprüft.
+- **Upload:** `chown` nur noch auf dem Zielordner (kein `chown -R` über bestehende Bäume).
+- **Docker:** kein rekursives `chmod 777` — Mounts/`mkdir` mit `755`.
+
+### English
+
+- **Shell:** Script names and cron fields validated/quoted before root/shell use.
+- **Scheduled backups:** Failed `tar` is not success; prune only after a verified archive; cron/job values checked before writing `/etc/cron.d`.
+- **Upload:** leaf `chown` only (no recursive `chown -R`).
+- **Docker:** no recursive `chmod 777` — mounts/`mkdir` use `755`.
+
+## 23.8.51 — 2026-10-01
+
+### Deutsch
+
+- **Danger-Lock:** Gefährliche Aktionen starten wieder **gesperrt**. „Volle Rechte“ muss bewusst im Header freigeschaltet werden.
+
+### English
+
+- **Danger lock:** Dangerous actions start **locked**. Users must enable “Full access” in the header deliberately.
+
+## 23.8.50 — 2026-10-01
+
+### Deutsch
+
+- **SSH:** Beim **ersten** Kontakt Fingerprint-Dialog — Key nur nach Bestätigung (kein stilles TOFU).
+- **Secrets:** SSH-Passwort und Key-Passphrase nur noch im System-Tresor; kein Klartext in der JSON (`keyring` nötig zum Speichern).
+- **Auto-Update:** zusätzlich zur SHA-256 eine **Ed25519-Signatur** (`.sig`) — schützt auch bei kompromittiertem GitHub-Account.
+- **Public Build:** u. a. Split-/Scan-/Sign-Hilfen werden mitgespiegelt.
+
+### English
+
+- **SSH:** First contact shows a fingerprint dialog — key stored only after confirmation.
+- **Secrets:** SSH password and key passphrase only in the OS vault; no plaintext JSON.
+- **Auto-update:** Ed25519 `.sig` in addition to SHA-256.
+- **Public build:** split/scan/sign helpers included in the mirror.
+
+## Unreleased
+
+### Deutsch
+
+- **Transfer Hub 0.6.28:** Mehrfachauswahl der Quellordner wie bei Wake & Sync (Häkchen → „Markierte übernehmen“). Pro Ordner ein eigener Transfer; Zielordner bleibt einzeln. Ganzes Volume nicht mit weiteren Ordnern kombinierbar.
+- **Transfer Hub / Wake & Sync:** Ordnerauswahl zeigt jetzt auch **Home** (`/home`, z. B. `papa/Photos`) — ohne SMB-Freigabe. Weiterhin ausgeblendet nur Systemordner (`@…`). Transfer Hub **0.6.28**, Wake & Sync **0.1.32**.
+- **Pro-Toolkit:** Beim Pro-Release (Build + GitHub) wird die Patch-Version automatisch um +1 erhöht (Checkbox in der Toolkit-App, Standard an).
+
+### English (short)
+
+- **Transfer Hub 0.6.28:** Multi-select source folders like Wake & Sync (check boxes → “Add checked”). One transfer per folder; destination stays single. Whole volume cannot be combined with other folders.
+- **Transfer Hub / Wake & Sync:** Folder picker now includes **Home** (`/home`, e.g. `papa/Photos`) without requiring an SMB share. Still hides only system folders (`@…`). Transfer Hub **0.6.28**, Wake & Sync **0.1.32**.
+- **Pro toolkit:** Pro release (build + GitHub) auto-increments the patch version (checkbox in the toolkit app, on by default).
+
+## 23.8.49 — 2026-10-01
+
+### Deutsch
+
+- **UGOS-API / TLS-TOFU:** HTTPS prüft die Gegenstelle per Zertifikat-Pin (wie SSH-Host-Key). Beim ersten Kontakt wird das NAS-Zertifikat gespeichert (`ugos_tls_certs.json`); später muss es übereinstimmen — **ohne** eigenes CA-Zertifikat und **ohne** `CERT_NONE`. Option „SSL prüfen (CA)“ weiter für System-CA. Button **TLS-Zertifikat vergessen** nach NAS-Neuinstallation.
+
+### English (short)
+
+- **UGOS API / TLS TOFU:** HTTPS pins the peer certificate (like SSH host keys). First contact stores the NAS cert (`ugos_tls_certs.json`); later connections must match — **no** custom CA and **no** `CERT_NONE`. “Verify SSL (CA)” remains for system CA trust. **Forget TLS certificate** after NAS reinstall.
+
+## 23.8.48 — 2026-10-01
+
+### Deutsch
+
+- **Öffentlicher Build:** `tools/build_python.py` wird mitgespiegelt (Public-Sync + Release-ZIP). README erklärt Python **3.12** / `UGREEN_BUILD_PYTHON`. `requirements.txt` enthält jetzt auch `paramiko` und `cryptography`. `RUN_BUILDER.bat` bevorzugt `py -3.12`.
+
+### English (short)
+
+- **Public build:** `tools/build_python.py` is included in the public sync and release ZIP. README documents Python **3.12** / `UGREEN_BUILD_PYTHON`. `requirements.txt` now lists `paramiko` and `cryptography`. `RUN_BUILDER.bat` prefers `py -3.12`.
+
+## 23.8.47 — 2026-10-01
+
+### Deutsch
+
+- **UGOS-API / TLS:** Klarer Hinweis, wenn HTTPS **ohne** Zertifikatsprüfung läuft (Standard wegen selbstsigniertem UGOS). Bessere Fehlermeldung, wenn „SSL prüfen“ an ist und das Zertifikat nicht passt. Default bleibt unverändert (Prüfung aus), damit bestehende Installationen nicht brechen.
+
+### English (short)
+
+- **UGOS API / TLS:** Clear warning when HTTPS runs **without** certificate verification (default for self-signed UGOS). Clearer errors when “Verify SSL” is on and the cert fails. Default unchanged (verify off) so existing installs keep working.
+
+## 23.8.46 — 2026-10-01
+
+### Deutsch
+
+- **Passwort-Sicherheit:** „Verbindung speichern“ legt das SSH-Passwort standardmäßig im **System-Tresor** ab (Windows Anmeldeinformationsverwaltung). In `nas_admin_connection.json` bleibt das Passwort-Feld leer. Vorhandene Klartext-Passwörter werden beim Start automatisch migriert. Fallback: Klartext nur wenn `keyring` fehlt.
+
+### English (short)
+
+- **Password security:** “Save connection” stores the SSH password in the **OS credential vault** by default. `nas_admin_connection.json` keeps an empty password field. Existing plaintext passwords migrate on startup. Fallback to JSON only if `keyring` is missing.
+
+## 23.8.45 — 2026-10-01
+
+### Deutsch
+
+- **SSH-Sicherheit:** Host-Keys werden per **TOFU** gespeichert (`ssh_known_hosts.json`). Beim ersten Verbinden wird der Schlüssel übernommen; ändert er sich später (z. B. MITM oder Neuinstallation), wird die Verbindung **abgelehnt**. In Settings: **SSH-Host-Key vergessen**.
+
+### English (short)
+
+- **SSH security:** Host keys use **TOFU** (`ssh_known_hosts.json`). First connect trusts the key; a later change rejects the connection. Settings: **Forget SSH host key**.
+
+## 23.8.44 — 2026-10-01
+
+### Deutsch
+
+- **Auto-Update (Sicherheit):** Setup-EXE wird nach dem Download per **SHA-256** gegen den GitHub-Asset-Digest geprüft. Bei fehlender Prüfsumme oder Abweichung wird die Datei verworfen und der Installer **nicht** gestartet.
+- **Info-Dialog:** Button **Nach Updates suchen** steht jetzt in einer eigenen Zeile (war zuvor in der engen Button-Leiste leicht übersehen / abgeschnitten).
+
+### English (short)
+
+- **Auto-update (security):** After download, the setup EXE is verified with **SHA-256** against the GitHub asset digest. Missing or mismatched digests discard the file and the installer is **not** launched.
+- **Info dialog:** **Check for updates** is now on its own row (previously easy to miss / clip in the crowded button bar).
+
+## 23.8.43 — 2026-09-12
+
+### Deutsch
+
+- **Explorer (NAS → NAS):** Rechtsklick → **Kopieren nach…** / **Verschieben nach…**, Zielordner aus der Liste wählen (voller Pfad, z. B. `/volume2/Papa Sicherung/APPS`). Kurzpfade wie `/volume2/APPS` werden erkannt, wenn der Name im Baum eindeutig ist. Systemordner (`@…`, Papierkorb) und Volume-Wurzeln als Quelle sind gesperrt. Bricht ab, wenn der Name im Ziel schon existiert. Braucht **volle Rechte**.
+- **Unterstützung:** GitHub Sponsors vorbereitet (neben PayPal). Header „☕ Coffee“ und Info-Link öffnen eine Auswahl PayPal / GitHub Sponsors. Get Pro: zusätzlicher Button **GitHub Sponsors**. `.github/FUNDING.yml` enthält `github: [runlevel1977-del]` + PayPal.
+- **System Health / NAS-Wächter:** Harmlose UGOS-Units (`run-r*.service` / `hdmi-action`) werden bei „failed systemd“ ausgeblendet. Docker-Check: kein Fehlalarm mehr, wenn der Daemon läuft, die CLI aber ohne Rechte ist (z. B. nur Dockhand).
+- **Pro — Speicher-Backup/Restore:** **„Backup jetzt“** sichert **Nutzerdaten** auf Volumes **plus Home** (`/home`, z. B. Photos); alle `@…`-Systemordner und Papierkorb ausgelassen. **„Wiederherstellen“** auf genau ein Volume **oder** Home. Apps in UGOS ggf. neu installieren.
+- **Pro — Probleme-Scan (genauer):** Nur echte Auffälligkeiten — SMART nur bei FAIL oder kritischen Zählern > 0; kein overlayfs-/Erfolgs-Rauschen; optionale UGOS-Dienste (`domain_tool`/`smbftpd`) und Exited-(0)-Container ausgeblendet; Skript-Logs nur ≤ 14 Tage; Journal/SSH ohne Scan-Eigenlärm.
+
+### English (short)
+
+- **Explorer (NAS → NAS):** Right-click → **Copy to…** / **Move to…**, pick the destination from the list (full path, e.g. `/volume2/Papa Sicherung/APPS`). Short paths like `/volume2/APPS` are resolved when the name is unique in the tree. System folders (`@…`, recycle) and volume roots as source are blocked. Aborts if the name already exists at the destination. Requires **full access**.
+- **Support:** GitHub Sponsors prepared (alongside PayPal). Header “☕ Coffee” and Info support link open a PayPal / GitHub Sponsors chooser. Get Pro: extra **GitHub Sponsors** button. `.github/FUNDING.yml` lists `github: [runlevel1977-del]` + PayPal.
+- **System Health / NAS watch:** Harmless UGOS units (`run-r*.service` / `hdmi-action`) filtered from failed-systemd noise. Docker check: no false alarm when the daemon runs but the CLI lacks rights (e.g. Dockhand-only).
+- **Pro — storage backup/restore:** **Backup now** backs up volume **user data plus Home** (`/home`, e.g. Photos); skips `@…` system folders and recycle bins. **Restore** onto exactly one volume **or** Home. Reinstall apps in UGOS if needed.
+- **Pro — problems scan (stricter):** Real issues only — SMART only on FAIL or critical counters > 0; no overlayfs/success noise; optional UGOS units (`domain_tool`/`smbftpd`) and Exited-(0) containers ignored; script logs only ≤ 14 days; journal/SSH without scan self-noise.
+
+## 23.8.42 — 2026-07-14
+
+### Deutsch
+
+- **Fenster / Notebook:** Startgröße und -position passen sich dem sichtbaren Arbeitsbereich an (Taskleiste berücksichtigt). Gespeicherte Fensterposition in `app_settings.json` → `window` — kein schleichendes Verschieben nach rechts mehr bei jedem Neustart.
+- **Scheduler-Drawer:** Breitenänderung behält die Fensterposition bei.
+
+### English (short)
+
+- **Window / laptop:** Startup size and position fit the visible work area (taskbar-aware). Saved geometry in `app_settings.json` → `window` — fixes gradual drift off-screen on restart.
+- **Scheduler drawer:** width changes preserve window position.
+
+
+### Deutsch
+
+- **Auto-Update:** Neue Versionen werden wie in Pro angeboten — Setup-EXE wird von GitHub heruntergeladen und gestartet (ℹ Info → „Nach Updates suchen“).
+- Öffentliches Repo — kein GitHub-Token nötig.
+
+### English (short)
+
+- **Auto-update:** New releases are offered like Pro — downloads the setup EXE from GitHub and launches it (ℹ Info → “Check for updates”). Public repo — no GitHub token required.
+
+## 23.8.40 — 2026-07-09
+
+### Deutsch
+
+- **Portable (One-Dir):** Einstellungen und Verbindung werden wieder gefunden — Migration aus dem alten `dist/`-Ordner (One-File) bzw. aus `%LOCALAPPDATA%\UgreenNASAdmin\`, wenn der neue Bundle-Ordner leer ist.
+
+### English (short)
+
+- **Portable (one-dir):** Settings and connection are found again — migrates from legacy `dist/` (one-file layout) or `%LOCALAPPDATA%\UgreenNASAdmin\` when the new bundle folder is empty.
+
+## 23.8.39 — 2026-07-08
+
+### Deutsch
+
+- **Hotfix:** App startet wieder — defekter Button „Verbindung testen“ entfernt (Methode war nie implementiert).
+- **Build:** One-Dir-Bundle statt One-File — `python312.dll` liegt dauerhaft neben der EXE (kein `_MEI*`-Temp-Ordner).
+
+### English (short)
+
+- **Hotfix:** App starts again — removed broken “Test connection” button.
+- **Build:** One-dir bundle instead of one-file — `python312.dll` stays beside the EXE (no `_MEI*` temp extraction).
+
+## 23.8.38 — 2026-07-08
+
+### Deutsch
+
+- **Webcam / RTSP:** Passwörter mit Sonderzeichen (`!`, `?`, `@` …) werden in RTSP-URLs automatisch encodiert — ffmpeg/ffprobe funktionieren damit.
+- **UGOS-Kamera-Scan:** Fallback auf `cameramgr/devices` wenn `device/cameras` leer; Tapo/ONVIF-Kameras aus verschachtelter Liste.
+
+### English (short)
+
+- **Webcam / RTSP:** Passwords with special characters are URL-encoded automatically for ffmpeg/ffprobe.
+- **UGOS camera scan:** Falls back to `cameramgr/devices` and parses nested camera entries.
+
+## 23.8.37 — 2026-07-06
+
+### Deutsch
+
+- **Get Pro — Anleitung:** Fünf Schritte ausführlich: Spende → Pro per E-Mail → installieren & Felder ausfüllen → Freischaltungsanfrage → Lizenz importieren.
+- **Webcam Recorder:** Scan über **USB** (`/dev/video*`), **UGOS Überwachung** (Surveillance Center per UGOS-API) und manuelle **RTSP-URLs**; neue Quelle `webcam_sources.py`; erweiterte Geräteliste in der Combobox.
+- **UGOS API:** Einheitliche Request-Header (`ug-agent`); neue Methode **`fetch_surveillance_cameras()`** für Kameraliste.
+
+### English (short)
+
+- **Get Pro guide:** Five detailed steps — donate → Pro by email → install & fill fields → activation request → import license.
+- **Webcam Recorder:** USB + **UGOS Surveillance** API scan + manual **RTSP** sources; new `webcam_sources.py`.
+- **UGOS API:** shared headers; **`fetch_surveillance_cameras()`** for camera list.
+
+## 23.8.36 — 2026-07-06
+
+### Deutsch
+
+- **Get Pro — Ablauf:** Reihenfolge korrigiert: zuerst **Spende**, dann **Anfrage** an `ugna@posteo.de`, **Lizenz erhalten**, danach **Pro installieren** und importieren.
+
+### English (short)
+
+- **Get Pro flow:** Correct order — **donate** first, then **request** to `ugna@posteo.de`, **receive license**, then **install Pro** and import.
+
+## 23.8.35 — 2026-07-06
+
+### Deutsch
+
+- **Sidebar — Get Pro:** Anleitung im Hauptbereich — **nur Supporter** (nach Spende) oder **Tester**; Lizenz an PayPal-Absender-Mail (oder in Spenden-Nachricht genannte Adresse); Anfrage an `ugna@posteo.de`.
+
+### English (short)
+
+- **Sidebar — Get Pro:** Main-area guide — **supporters/testers only**; license to PayPal sender email (or address in donation note); request to `ugna@posteo.de`.
+
+## 23.8.34 — 2026-05-19
+
+### Deutsch
+
+- **Lüfter — UGOS-Rückgabe:** Beim **„UGOS-Steuerung zurückgeben“** werden Kurven-Artefakte auf dem NAS jetzt vollständig entfernt — per Glob **`ugreen_fan_curve.state*`** (nicht nur die aktuell konfigurierten Fan-IDs). **`set -e`** im Rückgabe-Skript entfernt, damit ein Zwischenschritt das Löschen nicht abbricht.
+
+### English (short)
+
+- **Fan handback to UGOS:** cleanup now deletes all **`ugreen_fan_curve.state*`** files on the NAS; safer shell script without `set -e`.
+
+## 23.8.33 — 2026-05-19
+
+### Deutsch
+
+- **Dashboard → Lüfter (dynamisch):** Nach **„Lüfter prüfen & zuordnen …“** werden **alle** vom NAS gemeldeten RPM-Sensoren erkannt (typisch 1–4, max. 8) — **nicht** mehr fest zwei Kacheln. Pro Lüfter eine eigene Steuer-Kachel (Leise / Standard / Max / Manuell %, **Übernehmen**).
+- **Zuordnung:** Speicherung unter **`app_settings.json` → `dashboard.fan_devices`** (PWM-Kanal 1/2, RPM-Zeile, stabile Fan-ID); Legacy **`fan_slot0/1_*`** wird migriert.
+- **Lüfterkurve (neu):** Pro Lüfter **„Lüfterkurve …“** — Stützpunkte Temperatur → PWM %, Quelle CPU oder Platte, **Live-Vorschau** per SSH, gemeinsames NAS-Skript **`ugreen_fan_curve_apply.sh`** + Cron (minütlich + nach Neustart); State pro Lüfter.
+- **Boot-PWM:** Manuelles Prozent pro Kachel optional nach Neustart über **`ugreen_fan_boot.env`** mit **`FAN_COUNT`** (alle Kacheln).
+- **UGOS-Rückgabe:** Erste Kachel — Auto auf it86, `hwmonitor`, Entfernen von Boot-/Kurven-Cron auf dem NAS.
+- **Handbuch:** Kapitel **§6** (Dashboard) ausführlich **24.2 / 42.6 / 62** (Erkennung, Steuerung, Kurven); DE/EN + PDFs.
+
+### English (short)
+
+- **Dashboard fans:** scan discovers **1–8** fans; one control tile each; mapping in **`fan_devices`**; legacy slot keys migrate.
+- **Per-fan temperature curves** with live preview; NAS script + cron; boot profile for fixed PWM after reboot.
+- **Manuals:** chapter **§6** expanded (DE/EN PDFs).
+
+## 23.8.32 — 2026-06-27
+
+### Deutsch
+
+- **UGOS API (erweitert):** Parser für Sysinfo, Lüfter, Netzwerk-Links, Volumes und **Pools/Disks** (wie UGOS-Web-UI); Dashboard-Kachel **„Speicher (UGOS API)“**; Speicher-Tab **„Pools (UGOS API)“**; Health-Refresh mit **UGOS-API-Liveblock**; Warnung bei **`domain_tool.service` failed**.
+- **NAS-Verwaltung:** **UGOS Power-Scheduler** (Wochenplan Aus/Ein per `power.conf` + `OffSched`/`OnSched`), **HDD-Ruhezustand** (`internal_disk_sleep`), **UGOS-Service-Logs** (`.slog`-Liste + Tail), **Netzwerk (UGOS, nur Lesen)** für LAN1/LAN2; Layout **50:50** (Bedienung links, Protokoll rechts).
+- **Header:** SSH-Status **„verbunden“** wird nach Start automatisch per Kurztest gesetzt (grün, sobald gespeicherte Verbindung erreichbar ist — nicht erst nach manuellen Klicks).
+- **Handbuch:** Kapitel **§15** (NAS-Verwaltung), **§6** (Dashboard UGOS-Kachel), **§13** (Health), **§16** (Speicher); DE/EN + PDFs neu gebaut (`handbook_page_index.json` v23.8.32).
+
+### English (short)
+
+- **UGOS API:** richer pools/disks/net/fan; dashboard storage tile; storage pools button; health live block; `domain_tool` warning.
+- **NAS management:** weekly power scheduler, HDD spin-down, `.slog` log picker, read-only dual-NIC summary; **50:50** layout.
+- **Header:** SSH connected badge auto-probes on startup after loading saved credentials.
+- **Manuals:** chapters 15/6/13/16 updated (DE/EN PDFs).
+
+## 23.8.22 — 2026-05-19
+
+### Deutsch
+
+- **Runlevel Apps:** App-Icons vom NAS per `sudo cat` (Paket-Pfade unter `/var/packages/…` sind ohne root nicht per SFTP lesbar) — kein generisches 🔑 mehr nach dem Laden.
+
+### English (short)
+
+- **Runlevel Apps:** fetch tile icons via sudo over SSH; fixes missing icons on installed EXE.
+
+## 23.8.21 — 2026-05-19
+
+### Deutsch
+
+- **Runlevel Apps (neu):** Eigener Tab für installierte **Runlevel-UGOS-Apps** (`com.runlevel.*`) — Kachelansicht mit Icon, Status, **Docker CPU/RAM**, **Netzwerk ↑/↓** (wie UGOS Docker, via `docker stats`), Aktivität, Start/Stop, Browser-Link.
+- **Runlevel Apps — Layout:** Drei gleich breite Kacheln nebeneinander (normal/maximiert); stabile Breite ohne „erst nach Aktualisieren“-Effekt.
+- **Runlevel Apps — Netzwerk:** Nur echte Container-Netzraten vom NAS; keine falschen Transfer-Hub-Jobwerte mehr.
+
+### English (short)
+
+- **Runlevel Apps tab:** tiles for installed Runlevel UGOS Docker apps — status, Docker CPU/RAM, network rates (UGOS-aligned), start/stop, open web UI.
+- Responsive 3-column tile layout; network metrics from `docker stats` only.
+
+## 23.8.6 — 2026-05-19
+
+### Deutsch
+
+- **Handbuch-Kontext:** Button **📖 Handbuch** in der **Kopfzeile** (zwischen Info und Screenshot) — öffnet das passende Kapitel zum **aktuell aktiven Tab** (PDF-Seite via `handbook_page_index.json`, sonst Markdown-Auszug im Dialog). Keine Überlappung mit Tab-Buttons (Webcam, UGOS API, …).
+- **PDF-Seitenindex:** Beim Handbuch-PDF-Build wird `handbook_page_index.json` erzeugt (DE/EN, Kapitel → Seite); in der EXE enthalten.
+- Siehe auch **23.8.5** (SSH-Timeouts, Migration Pre-flight, Top-20 Hintergrund), **23.8.4** (Migrations-Assistent, 15 Docker-Rezepte), **23.8.3** (UGOS API, Homelab-Stapel).
+
+### English (short)
+
+- **Context manual button** in the header opens the handbook chapter for the **active tab** (PDF page jump or MD excerpt); no overlap with tab toolbar buttons.
+- **`handbook_page_index.json`** maps chapters to PDF pages (DE/EN), bundled in the EXE.
+- See also **23.8.5** (SSH timeouts, migration pre-flight), **23.8.4** (migration assistant, Docker recipes), **23.8.3** (UGOS API).
+
+## 23.8.5 — 2026-05-19
+
+### Deutsch
+
+- **SSH:** Konfigurierbare Timeouts (Settings → Verbindung: Standard/Lang); `run_ssh_cmd_ex` mit Exit-Code; Timeout-Meldung statt UI-Freeze.
+- **Migrations-Assistent:** rsync/Speichern im Hintergrund; **Vorab-Prüfung** (Pfade, Speicher, Remote-SSH); Exit-Code-Auswertung.
+- **Storage Top-20:** `du` läuft im Hintergrund (UI bleibt bedienbar).
+- **Handbuch:** **§78** (Migration inkl. Vorab-Prüfung/Buttons), **§79** (SSH-Timeouts), **§80** (Top-20); Settings **§23.3.1**; DE/EN + PDFs.
+
+### English (short)
+
+- Configurable SSH timeouts + exit codes; migration pre-flight + background rsync; storage top-20 in background thread.
+
+## 23.8.4 — 2026-05-19
+
+### Deutsch
+
+- **Migrations-Assistent (neu):** Backup-Tab und NAS↔NAS — rsync-Skripte für Volume-Umzug, NAS→NAS (Push/Pull) oder Synology/QNAP-Vorlage; Dry-Run, Speichern unter `/volume1/scripts/`, optional Ausführung per SSH.
+- **Docker — Fehlt im App Center:** 15 Compose-Rezepte (MeTube, Jellyfin, Immich, Paperless-ngx, Vaultwarden, Nextcloud, AdGuard, Sonarr/Radarr/Prowlarr, qBittorrent, Uptime Kuma, Home Assistant, Syncthing, Portainer) mit UGREEN-Pfaden `/volume1/docker/…`.
+- **Handbuch:** Ausführliche Schritt-für-Schritt-Praxisanleitungen **§77** (Docker-Rezepte) und **§78** (Migrations-Assistent), DE/EN.
+
+### English (short)
+
+- **Migration assistant** (rsync scripts for volume/NAS moves); **15 Docker App Center recipes** with UGREEN paths.
+
+## 23.8.3 — 2026-05-19
+
+### Deutsch
+
+- **UGOS API (neu):** Dashboard-Button **„UGOS API“** — Live-Snapshot über die **offizielle UGOS-Web-API** (CPU/RAM, Pools, Disks) ohne SSH-Parsing; Port/HTTPS unter Settings → Verbindung. Benötigt `pip install cryptography` für RSA-Login.
+- **Docker:** **Homelab-Stapel** (Monitoring: Uptime Kuma + Dozzle + Homepage; Media: MeTube + qBittorrent); **Compose von GitHub laden** im Docker-Assistenten; Presets **MeTube**, **Scrutiny**, **Dozzle**.
+- **Settings / SSH:** UGOS-Hinweis nach Key-Install (UGOS_scripts); Handbuch **§23.4.5**, Docker **§48.1**.
+
+### English (short)
+
+- **UGOS API** dashboard snapshot via official web API; **Homelab stacks** + **GitHub compose import**; MeTube/Scrutiny/Dozzle presets; UGOS SSH key persistence hint.
+
+## 23.8.2 — 2026-05-14
+
+### Deutsch
+
+- **Neuer Tab Login Track (Sidebar 🔐):** Zeigt **Zugriffe nach Client-IP** aus mehreren NAS-Quellen per SSH — **SSH** (`journalctl`/`auth.log`), **UGOS** (`log_serv`, `ctl_serv`, `entry_serv`, Gateway), **SMB**, **aktive Verbindungen** (`ss`), optional **`last`**. Spalten **Zeit | IP | Quelle | Ergebnis | Benutzer | Detail**, **Trennlinien** zwischen Einträgen, **nur-Lesen**-Liste mit **Rechtsklick**.
+- **Echtzeit (Standard):** Polling ca. alle **4 s** nur solange der Tab aktiv ist; **Baseline** + **Delta** (keine Flut alter Journal-Zeilen); Filter für **eigene Collect-/sudo-Echos** und optional **App-Session-Pings** (VerifyToken-Rauschen, echte Logins bleiben).
+- **Historie:** **Aktualisieren** mit abgeschalteter Echtzeit lädt ca. **30 Tage** Journal-Fenster plus Log-Tails.
+- **Sortierung:** **Datum/Uhrzeit** (zuerst Kalendertag, dann Uhrzeit; gemischte Zeitformate; ohne Zeitstempel **am Ende**), dazu **IP**, **Benutzer**, **Quelle**, **Ergebnis**; **Neueste / Z–A zuerst**.
+- **IP sperren:** Button und Kontextmenü schreiben IPv4 in **`/ugreen/.config/block_ip_list`** (UGOS); NAS-IP und Loopback sind gesperrt.
+- **Export …** speichert den sichtbaren Bericht als Textdatei auf dem PC.
+- **UI:** Login Track in **11 Sprachen** (DE/EN + HR/FR/ES/IT/PL/RU/TR/KO/ZH).
+- **Dokumentation:** **`README.md`**, **`CHANGELOG.md`**, **`HANDBUCH.md`** / **`HANDBOOK_EN.md`** (neues Kapitel **§14 Login Track**; NAS-Verwaltung **§15**), Kurzfassung **`HANDBUCH_STRUKTURIERT.md`**; PDFs: `python tools/build_handbuch_pdf.py`, `python tools/build_handbook_en_pdf.py`.
+
+### English (short)
+
+- **New Login Track tab:** client-IP-focused access log over SSH (SSH, UGOS app/web, SMB, `ss`, `last`); live baseline/delta, history refresh, sort/export, optional hide session pings, block IP via UGOS list.
+- **Docs:** README, CHANGELOG, DE/EN manuals **§14**, structured summary; rebuild PDFs.
+
+## 23.8.1 — 2026-05-09
+
+### Deutsch
+
+- **SSH / Geschwindigkeit:** **„Alles aktualisieren“** (Sidebar) bündelt die NAS-Abfragen in **einen sudo-Batch** (Marker `__UGRFX_*__`); bei fehlenden Markern **Fallback** auf die frühere Befehlssequenz. Zusätzlich im Batch: **`/etc/os-release`**, **`systemctl`-Liste aller `*_serv.service`** für die Service-Combobox.
+- **Header:** Zeile **UGOS/OS** inkl. **Beta**-Hinweis; Befüllung nach **„Alles aktualisieren“** oder beim **Start der Dashboard-Live-Schleife**, falls noch leer.
+- **NAS-Verwaltung:** Button **Support-Snapshot** (nur Lesen: uname, os-release, Journal- und Log-Tails).
+- **Tagesbericht-Skript (`nas_daily_report.py`):** Abschnitt **OS / UGOS** aus `os-release`.
+- **Handbuch:** `HANDBUCH.md` / `HANDBOOK_EN.md` und Kurzfassung `HANDBUCH_STRUKTURIERT.md` — Header **UGOS/OS**, **„Alles aktualisieren“** (gebündelter Refresh), Dashboard-Hinweis, **NAS-Verwaltung §14.11** (Service-Liste, Support-Snapshot), **Daily Report §31.5**.
+- **Release-ZIP:** `python tools/build_release_zip.py` erzeugt `release/UgreenNASAdmin_v<Version>_release.zip` mit **`source/`** (Quellen + `dist/UgreenNASAdmin.exe`) und **`installer/`** (Setup-EXE aus `installer/output/`, falls vorhanden).
+
+### English (short)
+
+- **Refresh all panels:** single **sudo SSH batch** with safe fallback; **os-release** + **`*_serv` unit list** for the service combobox.
+- **Header:** **UGOS/OS** line (incl. beta flag); filled on refresh or first **dashboard live** connect.
+- **NAS management:** **Support snapshot** button (read-only diagnostics).
+- **Daily report script:** **OS / UGOS** block from `os-release`.
+- **Manual:** `HANDBUCH.md` / `HANDBOOK_EN.md` and short `HANDBUCH_STRUKTURIERT.md` — header **UGOS/OS**, **Update everything** (batched refresh), dashboard note, **NAS management §14.11** (service list, support snapshot), **Daily report §31.5**.
+- **Release ZIP:** `python tools/build_release_zip.py` writes `release/UgreenNASAdmin_v<Version>_release.zip` with **`source/`** (sources + `dist/UgreenNASAdmin.exe`) and **`installer/`** (setup EXE from `installer/output/` when present).
+
+## 23.8.0 — 2026-05-09
+
+### Deutsch
+
+- **Handbuch (DE/EN):** Tab **NAS-Verwaltung** ist jetzt ein eigenes Kapitel **`## 14.`** mit großer PDF-Überschrift (wie andere Tabs); folgende Kapitel wurden um eins nach hinten verschoben. **`HANDBUCH_STRUKTURIERT.md`** verweist auf **`## 14`** statt der alten Unternummer **31.6**.
+- **Cron lesen (NAS-Verwaltung):** Zusätzlich **`ls /etc/cron.d`** und **direktes Lesen** der root-**Crontab-Spool-Dateien** (`/var/spool/cron/…`), weil `crontab -l` per SSH oft leer bleibt. **TimedShutdown**-Zeilen (z. B. **`/sbin/TimedShutdown`** in der Root-Crontab, typisch für UGOS-Zeitabschaltung) werden ausdrücklich erkannt, nicht nur allgemeines `shutdown`/`poweroff`.
+- **Dashboard → Netzwerk (Kachel erweitert):** Während der **Live-Überwachung** werden pro physischer NIC u. a. **`ip -j addr`** und die **IPv4-Standardroute** (`ip -j route`) ausgewertet und in der Kachel unter **„Aktuelle Konfiguration“** angezeigt (Zustand, MAC, IPv4/Präfix, DHCP vs. statisch, Standard-Gateway wenn diese Schnittstelle die Default-Route trägt). **Dropdown „Schnittstelle“** wählt die Detailansicht; Auswahl wird in **`app_settings.json` → `dashboard.net_detail_iface`** gespeichert. **Filterzeile** (kommagetrennt, z. B. `eth0,eth1`) begrenzt die **Sparkline-Durchsatzkurven**; leer = alle NICs wie bisher — gespeichert unter **`dashboard.net_monitor_filter`**. Zum **Ändern:** Felder **IPv4**, **Präfix**, **Gateway**, Modus **Statisch** oder **DHCP neu**; **„Vom NAS laden“** übernimmt die zuletzt gemessenen Werte; **„Anwenden (sudo)“** setzt Laufzeit-Settings per `ip` bzw. `dhclient`/`dhcpcd` und erfordert **„Volle Rechte“** im Header sowie Bestätigung (Risiko: falsche Adresse bricht SSH ab). **Hinweis:** OS-seitige Speicher in UGOS kann die Werte nach Neustart wieder überschreiben — dauerhafte System-IP bleibt primär Sache der NAS-Oberfläche. Beim Speichern unter **Settings** bleiben **`dashboard`** und **`docker_update`** in **`app_settings.json`** erhalten (Merge).
+- **Dashboard → Lüfter:** Über den Bereich liegt eine Zeile mit **„Lüfter prüfen & zuordnen …“** (SSH/sudo): Scan von **`/proc/it86/fan`** und **`hwmon`-`fan*_input`**, dann im Dialog **PWM-Kanal** (UGOS Kanal 1 vs. 2: `set`/`cpu` vs. `set2`/`cpu2`/`fan2`) und **RPM-Anzeige** pro Kachel wählbar; Speicherung lokal unter **`app_settings.json` → `dashboard`:** **`fan_slot0_use_pwm_secondary`**, **`fan_slot1_use_pwm_secondary`**, **`fan_slot0_rpm_key`**, **`fan_slot1_rpm_key`**. Persistiertes **Boot-PWM** (`ugreen_fan_boot.env`) enthält zusätzlich **`SLOT0_USE2`** / **`SLOT1_USE2`** passend zur Zuordnung. **Nur ein physischer Lüfter:** die zweite Kachel zeigt keine duplizierte Drehzahl mehr („nicht lesbar“, bis eine zweite RPM-Quelle existiert oder im Dialog eine Zeile gewählt wurde).
+- **Dokumentation:** **`README.md`**, **`HANDBUCH.md`**, **`HANDBOOK_EN.md`**, **`HANDBUCH_STRUKTURIERT.md`** — Lüfter- und Netz-Kapitel (§ 6); PDF über **`tools/handbuch_pdf_from_md.py`**, Build: `python tools/build_handbuch_pdf.py`, `python tools/build_handbook_en_pdf.py`.
+
+### English (short)
+
+- **NAS management — cron reads:** **cron.d** listing, root **spool** paths, explicit **TimedShutdown** line detection.
+- **Dashboard network tile:** **`ip -j addr` / route** summary, NIC **sparkline filter**, guarded runtime IP apply; **`dashboard`** merge on Settings save.
+- **Dashboard fans:** **Probe & map** per tile (PWM + tach), **`SLOT0_USE2`/`SLOT1_USE2`** in boot env; no duplicate RPM when only one fan is present.
+
+## 23.7.0 — 2026-05-09
+
+- **Tab „NAS-Verwaltung“ ausgebaut (ein Scroll-Layout, gemeinsames Protokoll):** zusätzlich zu USB/SMART/RAID-Wartung/LED/Summer u. a. **Energie** (`/etc/power.conf`, WoL), **täglicher Shutdown** über `/etc/cron.d/nas_admin_timed_shutdown`, **UGOS-USB-Auswurf** mit `USBDiskStop` und lsof/fuser-Vorcheck (Dialogs nur im UI-Thread), **SMART Self-Test Log**, **mdcheck Fortschritt**, **SSH-Härtung** als `sshd_config.d`-Drop-in mit **bestätigtem Rollback** (`at` nur gezielt per Job-ID, Schreiben per base64), **UGOS-`*_serv`-Konsole**, **NGINX** Reload/Recovery, **earlyOOM**-Editor, **Samba** Freigaben/Papierkorb/Schnellanlage, vollständige **DE/EN-Übersetzungen** für die neuen Texte.
+
+## 23.6.0 — 2026-05-08
+
+Vergleichsbasis: **neueste öffentliche GitHub-Release `v23.5.2`**.
+
+### Deutsch (ausführlich)
+
+- **Settings / SSH-Workflow deutlich erweitert:**
+  - Neue Buttons im Verbindungsbereich:
+    - **`🔑 SSH-Key-Paar erstellen …`**
+    - **`📌 Öffentlichen Key auf NAS installieren …`**
+  - Direkter In-App-Flow für Key-basierte Authentifizierung:
+    - Schlüsselpaar lokal erzeugen (`ugreen_nas_admin` + `.pub`)
+    - optionaler Passphrase-Flow (kompatibel mit RSA/Ed25519-Strategie)
+    - Public-Key-Installation auf Zielsystem über einmalige Passwort-SSH-Session
+    - Zielauswahl **UGREEN** oder **zweites NAS/QNAP** inkl. SSH-Port-Abfrage für QNAP/Second-NAS.
+  - Zweck: reproduzierbare, zentral gesteuerte SSH-Key-Einrichtung ohne externe PowerShell-Schritte.
+
+- **Health/System-Bereich erweitert:**
+  - Neuer Health-Hauptbutton **`🗓️ Scheduler-Inventar`** zur schnellen Übersicht geplanter Jobs.
+  - UGOS-Service-Panel und zugehörige Texte/Erklärungen weiter ausgebaut.
+
+- **Dashboard deutlich erweitert (Live-Metriken + Visualisierung):**
+  - Dashboard-UI und Live-Loop ausgebaut (stabilere Aktualisierung und automatische Live-Synchronisation beim Tab-Wechsel).
+  - Sparkline-/Trenddarstellung für Kennzahlen (inkl. Disk/Netz-Visualisierung) als kompakter Verlauf statt reiner Textwerte.
+  - Verbesserte Erkennung NAS-relevanter Mounts (inkl. USB-/externer Mount-Hinweise) für die Dashboard-Storage-Sicht.
+
+- **Lüftersteuerung massiv ausgebaut (Dashboard):**
+  - Zwei Lüfter-Kacheln (System + CPU) mit RPM-Anzeige und Zustandszeile.
+  - Modus-Buttons je Kanal: **Silent**, **Standard**, **Max** sowie **Manuell (%)** mit Apply.
+  - Precheck vor Schreibzugriffen (hwmonitor/it86-Pfadprüfung) und robustere SSH-Fehlerbehandlung in der UI.
+  - Explizite Rückgabe an UGOS über **„UGOS-Steuerung zurückgeben“** (Auto-Betrieb wiederherstellen, Cron-/Boot-Block aufräumen).
+  - Persistenz-Flow für manuelle Lüfter-Profile über NAS-seitige Boot-Umgebung (`/volume1/scripts/ugreen_fan_boot_apply.sh`, `.env`) und Reboot-Integration.
+
+- **Internationalisierung (i18n) erweitert und bereinigt:**
+  - Neue SSH-/Settings-Texte in DE/EN plus Ergänzungen für zusätzliche Sprachen (u. a. hr/fr/es/it/pl/ru/tr/ko/zh) in den Supplement-Locales.
+  - Ergänzung neuer Health-Labels (`health.scheduler_inventory`) in den Zusatzsprachen.
+  - Ziel: konsistente UX ohne englische Resttexte in neu hinzugefügten Funktionen.
+
+- **Dokumentation stark ausgebaut (gegenüber `v23.5.2`):**
+  - Deutsches Handbuch **`HANDBUCH.md`** und englisches Handbuch **`HANDBOOK_EN.md`** mit vollständigen Settings-/SSH-Abschnitten:
+    - Knopf-für-Knopf-Erklärung
+    - Schritt-für-Schritt-Verfahren (UGREEN + QNAP/Second NAS)
+    - technische Wirkung (`authorized_keys`, Public/Private-Key-Trennung)
+    - Sicherheits- und Fehlerhinweise.
+  - Strukturierte Zusatzfassung **`HANDBUCH_STRUKTURIERT.md`** ergänzt.
+  - PDF-Generatoren für Handbücher vorhanden:
+    - `tools/build_handbuch_pdf.py`
+    - `tools/build_handbook_en_pdf.py`
+  - Ergebnisartefakte:
+    - `HANDBUCH.pdf`
+    - `HANDBOOK_EN.pdf`
+
+- **Projektregeln/Release-Disziplin geschärft:**
+  - In `.cursorrules` explizit verankert:
+    - Bei jeder neuen Funktion/Button müssen **Handbuch (DE/EN)**, **README** und **CHANGELOG** im selben Arbeitsgang aktualisiert werden.
+  - Ziel: keine Feature-Drift zwischen UI, Doku und Release-Notizen.
+
+- **Allgemeine Weiterentwicklung seit `v23.5.2` (bereits im Repo-Changelog dokumentiert):**
+  - Ausbau Netzwerkgeräte-/Dashboard-/Docker-/Webcam-/Backup-Flows.
+  - Größere i18n-Abdeckung.
+  - Verbesserungen an Theme/UI, Explorer, Storage/ACL/Snap, Settings-Tab und Dokumentations-Tooling.
+  - Siehe auch die bereits vorhandenen Einträge **23.3.0**, **23.4.0**, **23.5.x** für die chronologische Detailhistorie.
+
+### English (summary)
+
+- Compared to the latest public GitHub release **`v23.5.2`**, the current unreleased state adds a full **Settings SSH key workflow** (create key pair, install public key to UGREEN or second NAS/QNAP, one-time password install flow, key-based reuse afterwards).
+- Health adds **Scheduler inventory** and improved UGOS service visibility text.
+- Dashboard was expanded with richer live metrics and sparkline-style trend visualization (including storage/network rows).
+- Fan control in Dashboard was extended to dual-channel control (System/CPU) with preset modes (Silent/Standard/Max), manual percent apply, UGOS handover, and boot-profile persistence flow.
+- i18n was extended for new Settings/SSH/Health labels across DE/EN and supplemental locales.
+- Documentation now includes complete DE/EN manuals with step-by-step SSH procedures, plus PDF build scripts and generated handbook PDFs.
+- Project rules now explicitly require synchronized updates of **manuals + README + CHANGELOG** whenever features/buttons are added or changed.
+
+## 23.5.2 — 2026-05-03
+
+### Deutsch (ausführlich)
+
+- **Öffentliche GitHub-Doku / README:** Screenshot-Galerie komplett erneuert — Bilder nach **App-Bereichen** benannt und unter **`images/`** ohne Leerzeichen im Dateinamen (u. a. `dashboard.png`, `scripts.png`, `task_scheduler.png`, `explorer.png`, `nas_to_nas.png`, `devices.png`, `storage.png`, `docker.png`, `users.png`, `snapshots.png`, `backup.png` / `backup_2.png` / `backup_3.png`, `system_health*.png`, `settings*.png`, `info.png`), damit **GitHub und ZIP** die Links zuverlässig auflösen.
+- **`tools/build_oeffentlich_readme.py`** (privates Projekt): Pfade und Bildunterschriften an die neue Galerie angepasst; **„What’s new“** um **v23.5.2** ergänzt — nach `python tools/build_oeffentlich_readme.py` ist dieses **`README.md`** aktualisiert.
+- **`__version__`** → **23.5.2** in **`ugreen_app/nas_manager.py`**.
+
+### English (summary)
+
+- **Public README / GitHub:** full **screenshot refresh** — area-based filenames under **`images/`** (URL-safe); captions aligned with major tabs.
+- **Version bump** to **23.5.2**.
+
+## 23.5.1 — 2026-05-01
+
+Patch-Release (**ohne neue App-Features**) — Versionsnummer, Doku und **öffentlicher** Release-Tree an die Backup-Dokumentation angeglichen.
+
+### Deutsch (ausführlich)
+
+- **`README.md` (privat):** Abschnitt **„10) Backup & Wiederherstellen“ / „Backup & restore“** stark erweitert — **drei Modi** (Docker+Skripte / Userdaten / alle Daten), **Ziele** NAS-intern · **PC-Ordner** · **USB am NAS** · **Zweit-NAS (SMB)**; **geplante Jobs** (`scheduled_backups.json`, **`ugreen_scheduled_backup_runner.py`**, Cron), Hinweis **kein reines „Ziel nur PC“** bei Cron; Kurz-Verweis für „Backup-first“-Nutzer direkt unter der Sicherheitwarnung (DE + EN Tab-Liste).
+- **`tools/build_oeffentlich_readme.py`:** Öffentliches README-Intro + **What’s new** an Backup-Kapitel und **v23.5.1** angepasst.
+- **`ugreen_app/nas_manager.py`:** **`__version__`** → **23.5.1**.
+
+### English (summary)
+
+- **README:** Expanded **§10 Backup & restore** (three modes, NAS/PC/USB/second‑NAS destinations, NAS-side cron notes); backup-focused callouts; synced public README generator blurbs.
+- **Version bump** to **23.5.1** (`nas_manager.py`).
+
+## 23.5.0 — 2026-05-01
+
+### Deutsch (ausführlich)
+
+- **Tab „Netzwerkgeräte“:** neue Übersicht **LAN- und USB-Geräte, die das NAS über SSH sieht** (Nachbarschaft/ARP-artige Daten; `lsusb` / `lsblk` für USB; ohne aktive SSH-Session Hinweis statt Scan). Für Nutzer dokumentiert die **README** den Ablauf **Geräte suchen** und Abgrenzung zum PC-Netzwerkscan.
+- **Internationalisierung (alle UI-Sprachen):** Modul **`ugreen_app/i18n_supplement_devices_telegram.py`** mit vollständigen Einträgen für **`tab.devices`**, **`nav.devices`**, alle **`devices.*`**-Zeichenketten sowie **vollständigem `health.telegram_hint`** (Token/Settings, NAS-Zentral-Wächter/Cron, **SSH-Login-Meldungen vs. Platten-Schwellen**, **SSH-Keepalive**, UGOS/vertrauenswürdige Client-IP) für **hr, fr, es, it, pl, ru, tr, ko, zh** — eingebunden per zusätzlichem Merge in **`i18n.py`**. PyInstaller: **`hiddenimports`** **`ugreen_app.i18n_supplement_devices_telegram`** in **`UgreenNASAdmin.spec`**.
+- **`translate()`:** bei Aufrufen **ohne** `str.format`-Platzhalter **LRU-Cache** (weniger Arbeit bei häufigen `self.t(...)`-Zugriffen).
+- **Dokumentation:** **`README.md`** stark erweitert — vollständige **Tab-Reihenfolge** (inkl. **Dashboard**, Netzwerkgeräte), neue Kapitel **Dashboard / Netzwerkgeräte / Backup-Einstieg**, Abschnitt **SSH-Login vs. Telegram-Wächter** (DE + EN); **`CHANGELOG.md`** dieser Eintrag.
+
+### English (summary)
+
+- **Network devices** tab: NAS-side LAN/USB discovery over SSH (documented in README).
+- **i18n:** `i18n_supplement_devices_telegram.py` + merged into **`i18n.py`** for nine locales; full **devices** strings and extended **health.telegram_hint**; PyInstaller hidden import in **`UgreenNASAdmin.spec`**.
+- **`translate()`:** LRU cache for plain lookups (no format kwargs).
+- **Docs:** README tab overview, Dashboard / Network devices, Backup overview, Telegram/SSH clarification (EN + DE).
+
+## 23.4.0 — 2026-04-26
+
+### Deutsch (ausführlich)
+
+- **Mehrsprachige Oberfläche (i18n) ausgebaut:**
+  - Umfangreiche **Übersetzungstabellen** in `i18n.py` und deutlich mehr **UI-Sprachen** (u. a. neben DE/EN z. B. kroatisch und weitere Locales, je nach Stand der `TRANSLATIONS_*`-Blöcke).
+  - **`normalize_lang(...)`** — in der Verbindungskonfiguration und an anderen Stellen werden gespeicherte **Sprachcodes** normalisiert, statt sie strikt auf `de`/`en` zu begrenzen.
+- **Einstellungen (Setup-Tab):** **UI-Sprache** wählbar (Dropdown) mit **Anwenden**-Button, damit der Wechsel der Oberflächensprache sichtbar und erreichbar ist.
+- **Laufende i18n-Bereinigung:** vereinzelte fest codierte engl./deut. Texte auf **`self.t("…")` / `translate()`** umgestellt (u. a. Explorer-Panel „NAS“, Docker-Katalog **Image**-Spaltenkopf, Webcam-**FPS**-Label, Transfer **ETA-Platzhalter** und Meldung „Entpacke auf dem NAS…“).
+- **Weitere Mixin-Verbesserungen:** u. a. **Theme-UI**, **Storage/ACL/Snap** und **Tab-Setup** für konsistenteres Verhalten.
+- **Öffentliche Doku (README, GitHub):** deutlichere Erklärung, dass **Code → Download ZIP** stets **Quellcode** des **Standard-Branches** ist (kein Release-EXE-Bundle, keine Umlenkung des Buttons in Releases möglich); Screenshot-Beschriftung **v23+** statt veraltet wirkendem alten Versatz.
+
+### English (summary)
+
+- **Wider i18n coverage** (many locales and large translation table updates); **`normalize_lang()`** for stored UI language values (not limited to a strict de/en check).
+- **Settings tab:** **UI language** combobox and **apply** for switching the interface language in-app.
+- **More user-visible strings** moved to the translation system (Explorer NAS panel, Docker catalog **image** column, Webcam **FPS**, transfer ETA placeholder, “unpacking on NAS” text).
+- **Polish** in **theme UI**, **storage/ACL/snap**, and **tab setup** mixins.
+- **Public README** (generated for `öffentlich/`) clarifying GitHub **Code → Download ZIP** vs. **Releases/Assets**; updated screenshot line to **v23+**.
+
+## 23.3.0 — 2026-04-23
+
+### Deutsch (ausführlich)
+
+- **Webcam Recorder (neu, produktionsreif):**
+  - Neuer **Webcam-Panel-Workflow** in der App mit Geräte-Scan (`/dev/video*`), Live-Preview, Sofortaufnahme und täglicher Zeitplanung (Cron auf dem NAS).
+  - **Kamera-Controls integriert:** Auto/Manual Exposure, Exposure-Wert, Gain und 50/60Hz Netzfrequenz über `v4l2-ctl`.
+  - **Dauer-Auswahl verbessert:** Aufnahmezeit per Dropdown für **Sekunden, Minuten, Stunden, Tage**.
+  - **Qualitätsprofile:** `compatible`, `hq`, `space` mit Encoder-Fallbacks (`libx264` / `libx265` / `mpeg4`) für unterschiedliche NAS-Umgebungen.
+  - **Pre-Flight-Check:** Prüfung auf `ffmpeg`, `v4l2-ctl`, Device-Lesbarkeit, Zielordner-Schreibrechte und freien Speicher vor Aufnahme/Planung.
+  - **1-Klick Selbsttest:** 3s Testaufnahme inkl. Datei-Validierung und klarer Statusausgabe (OK/Fail + Dateipfad).
+  - **Dateirotation:** optionales Limit „keep N files“ löscht alte `webcam_*.mp4` automatisch.
+  - **Motion Detection (optional):** Bewegungserkennung (Frame-Hash-Vergleich) mit Skip bei statischem Bild.
+  - **Status & Transparenz:** Sichtbarer Aufnahme-Status inkl. letzter Ausgabedatei im Webcam-Fenster.
+  - **Ordnerbrowser gehärtet:** Root zeigt nur sichere Datenpfade (`/volume*`), keine Systemordner.
+- **Berechtigungen robuster behandelt:**
+  - Preflight unterscheidet sauber zwischen **User-Write** und **Root-Write**.
+  - Sofortaufnahme verlangt User-Schreibrecht; geplante Jobs/Selbsttest können bei Bedarf Root-Write nutzen.
+- **Storage ergänzt (Disk Imaging/Restore):**
+  - Scan von Block-Devices mit Kennzeichnung sensibler Ziele (System/RAID-Kontext) und Workflows für Image nach PC/NAS sowie Restore von PC/NAS.
+- **Docker ergänzt (Catalog):**
+  - Docker-Hub-Katalog mit Suche/Browse und Übergabe in den Docker-Assistenten (`docker run` / compose YAML mit Presets).
+- **i18n/UX erweitert:**
+  - Neue DE/EN-Texte für Webcam-Status, Preflight, Selbsttest, Qualitäts-/Motion-/Rotationsoptionen und Ordnerauswahl.
+
+### English (summary)
+
+- Added a full **Webcam Recorder suite**: device scan, live preview, immediate/scheduled recording, camera controls, quality profiles, preflight checks, self-test, rotation, optional motion detection, and clear status output with last file path.
+- Hardened permission handling by separating **user write** vs **root write** checks (manual recording vs scheduled/root-capable flows).
+- Added **disk imaging/restore** workflows with safer disk detection context.
+- Added **Docker Hub catalog** helper to prefill deployment wizard (`docker run` / compose presets).
+- Extended DE/EN i18n coverage for all new webcam and release-facing UI text.
+
+## 23.2.0 — 2026-04-20
+
+### Deutsch (ausführlich)
+
+- **Mehrere SMB-Ziele (NAS ↔ NAS):**
+  - Settings unterstützen jetzt **Profil-Liste** für das zweite NAS (`second_nas_smb_peers`) inkl. aktivem Index.
+  - Profile können in den Settings per Dropdown gewählt, hinzugefügt und gelöscht werden.
+  - Der aktive Peer wird im NAS↔NAS-Tab übernommen; beim Wechsel werden SMB-Verbindungen sauber getrennt und die Peer-Ansicht geleert.
+  - Kompatibilität zu älteren Settings bleibt erhalten (`second_nas_smb` als aktives Profil).
+- **Settings-Privacy für sensible Felder:**
+  - Telegram- und E-Mail-Identitätsdaten (Token/Chat, SMTP User/Pass/From/To) werden beim Laden maskiert.
+  - Neue **Show/Hide**-Schalter im Settings-Tab; maskierte Werte bleiben speicherbar ohne Klartext-Re-Edit.
+  - Beim Wechsel in den Settings-Tab werden sensible Felder erneut aus Settings gezogen und maskiert angezeigt.
+- **Script-Benachrichtigungen (neu):**
+  - Neuer Block in den Settings: **Script wählen**, Kanal (**Telegram/E-Mail**), Trigger (**Erfolg/Fehler/beides**), Regeln verwalten.
+  - Regeln werden in `app_settings.json` unter `script_notifications.rules` gespeichert.
+  - Manuelle Host-Testläufe senden Benachrichtigungen regelbasiert.
+  - Fehler beim Versand werden sichtbar geloggt (Telegram/SMTP-Fehlermeldung statt „still“).
+- **Automatisch für Cron/Nachtläufe (ohne PC):**
+  - Neuer NAS-Runner: `ugreen_script_notify_runner.py` + `ugreen_script_notify_config.json` auf `/volume1/scripts/`.
+  - Cron-Einträge für Host/Docker-Skripte werden über den Runner gewrappt, damit Benachrichtigungen auch bei z. B. 03:00 Uhr funktionieren.
+  - Neuer Settings-Button **„Auf NAS sync“** zum expliziten Upload von Runner + Config.
+  - Robuster EXE-Fallback: wenn Runner-Datei lokal (PyInstaller-Temp) fehlt, wird eingebetteter Runner-Quelltext verwendet.
+- **Sichtbarkeit „welche Scripts melden“:**
+  - Script-Liste markiert aktive Regeln klar mit **`🔔`**-Präfix.
+  - Zusätzliche Übersichtszeile zeigt für das ausgewählte Script den aktiven Notify-Status (Kanal + Trigger).
+- **Media/Generator-Tools ergänzt:**
+  - `tools/generate_code_rain_video.py` erweitert (Qualität/Duration/FPS/Workers/Codec, inkl. AV1-Optionen).
+  - `tools/generate_window_sea_video.py` (30s Fenster-Meer-Animation).
+  - `tools/generate_light_rain_audio.py` (WAV/MP3-Ausgabe, sanfter Regen).
+
+### English (summary)
+
+- Multi-peer SMB profiles for NAS↔NAS, with active profile switching and UI sync.
+- Settings privacy masking + Show/Hide for Telegram/Email sensitive values.
+- New script notification rules in Settings (script + channel + trigger).
+- NAS-side runner for cron/night jobs (`/volume1/scripts/ugreen_script_notify_runner.py`) so alerts work even when the PC is off.
+- New “sync to NAS” button and robust packaged-app fallback for runner source.
+- Script list now visibly marks notification-enabled entries with `🔔`.
+- Added/extended media generation helper tools (code-rain video, sea-window video, light rain audio).
+
+## 22.6.0 — 2026-04-07
+
+Kurz: SSH-**Profile**, Docker **Live-Log** + **Compose** (config/ps/up-d, Plugin/Legacy-Fallback), Script-**Vorlagen** rsync/restic/rclone, Tk-**Frame**-Padding-Fix, ZIP-Version aus `nas_manager.py`. Details: **`öffentlich/CHANGELOG.md`**.
+
+## 22.5.0 — 2026-04-04
+
+### Deutsch (ausführlich)
+
+- **Öffentliches Release-Paket:** Forum-/Release-ZIP (**`UgreenNASAdmin_v22.5.0_oeffentlich_mit_EXE.zip`**) enthält neben Quellen und **`dist/UgreenNASAdmin.exe`** den Ordner **`images/`** inkl. **drei neuen Screenshots** zum Tab **System & Health** (`health_system_1.png`–`health_system_3.png`, einheitliche Dateinamen ohne Leerzeichen). Die bisherigen Übersichtsbilder **`1.png`–`6.png`** bleiben erhalten.
+- **Dokumentation (`öffentlich/README.md` + Root-`README.md`):** Kurzanleitung **Einrichten der Benachrichtigungen** (Telegram-Wächter, NAS-Zentral-Wächter mit **E-Mail/Telegram**, Hinweise zu SMTP/SMTPS und DNS auf dem NAS) auf **Deutsch und Englisch**; neue **Funktionsliste** der App (DE/EN).
+- **Internationalisierung:** Upload-/Download-**Dialoge** und zugehörige **Transfer-Log**-Texte über **`i18n`** (keine fest eingebauten deutschen `messagebox`-Titel mehr in diesen Pfaden); **Telegram:** manuelle NAS-Prüfung, Teststatus und **Testnachrichtentext** folgen der UI-Sprache.
+- **Stabilität (Tk/Windows):** SSH-Befehle aus **Hintergrund-Threads** rufen die Statuszeile nicht mehr mit **`update_status=True`** auf (**Explorer** Verzeichnisgrößen/Aufklappen/Suche, **Transfer** Abbruch-Cleanup, **Docker** Stats/Inspect/Logs, **Telegram-Wächter** Prüfschleife) — reduziert Risiko von UI-Freezes analog zur bereits behobenen NAS-Wächter-Installation.
+- **NAS-Zentral-Wächter / Tagesbericht (Kontext Release):** Fortführung der zuvor dokumentierten Features: **SMTPS (Port 465)**, **`--smtp-test`**, robusterer **E-Mail-Betreff**, optional **SSH-Login-Fehler** in der Auswertung, **Tagesbericht** (`nas_daily_report.py`) mit **`message_lang`**, gekürzter Berichtsinhalt und Emojis; **PyInstaller**-`datas` enthalten **`nas_central_watch.py`** und **`nas_daily_report.py`** (siehe `.spec`).
+- **SSH / Zeitpläne:** Bei **`sudo -S`** liefert die App den Befehlsausgang ohne angehängte **stderr**-Zeilen (z. B. `[sudo] password for …`), damit **`/etc/cron.d/papa_jobs`** im Editor stabil bleibt; sudo-Zeilen werden beim Lesen von Cron-Text verworfen (`nas_ssh.run`, `_sanitize_stable_cron_text`).
+- **Scripte-Tab:** **„💾 Speichern“** (root), **„💾 Als Benutzer“** und **Strg+S** speichern den Editor (u. a. **STABLE_TASKS**).
+- **Docker-Assistent:** **Zwei Schritte** (Editor → Weiter → Scan/mkdir/Start), **grid**-Layout, **`tk.Button`**, Mindesthöhe Editor.
+- **System & Health (Layout):** Aktionsleiste, scrollbares Panel für Telegram/Wächter/Tagesbericht, Mausrad-Scroll, Telegram **Cooldown** neben **Temp max**, NAS-Wächter-Checkboxen kompakt.
+
+### English (summary)
+
+- **Public zip:** includes **`images/`** with three **System & Health** screenshots (`health_system_1.png`–`3.png`); README updates (notification setup **DE/EN**, feature list **DE/EN**).
+- **i18n:** transfer/telegram dialogs and log strings; no hardcoded German in those UI paths.
+- **Threading:** `run_ssh_cmd(..., update_status=False)` from worker threads in explorer, transfer cleanup, docker log/stats/inspect, telegram guard checks — fewer Tk freezes on Windows.
+
+### Build
+
+- **`UgreenNASAdmin.spec`:** `nas_daily_report.py` in **`datas`** (bereits im Hauptprojekt; öffentliche `.spec` angeglichen).
+- **`tools/zip_oeffentlich_forum.py`:** Ausgabearchive auf **v22.5.0** umbenannt.
+
+## 22.4.0 — 2026-04-03
+
+### Neu
+
+- **Docker-Assistent („Neuer Docker“):** Nach **„Variablen scannen“** werden u. a. **`${PLATZHALTER}`** / `$VAR`, **Compose-Volume-Hostpfade**, **`type: bind` → `source:`**, **`-v`/`--volume`**, **Host-Ports** (`-p` / `ports:`) und **`-e KEY=` mit Pfad/leer** als Formularfelder angeboten; nach Ausfüllen werden Werte eingesetzt, optional **Host-Ordner auf dem NAS** angelegt, dann Compose oder `docker run` ausgeführt. Modul **`ugreen_app/docker_deploy_wizard.py`**, Tests **`tests/test_docker_deploy_wizard.py`**.
+
+### Build
+
+- PyInstaller Hidden Import **`ugreen_app.docker_deploy_wizard`**.
+
+### Behoben
+
+- **`nas_ssh.write_remote_file_sudo`:** SFTP versucht nacheinander **relativen Dateinamen** (SFTP-Chroot), **`$HOME/…`**, **`/tmp`**, dann `sudo mv`. Schlägt SFTP komplett fehl, **Fallback ohne SFTP:** `sudo python3 -c …` schreibt die Datei per **Base64** direkt nach Ziel + `chmod` — **„Auf NAS installieren“** auch bei restriktivem SFTP.
+- **Zeitpläne (stabile Cron-Zeilen):** Endet der Skriptname mit **`.py`**, wird in **`/etc/cron.d/papa_jobs`** jetzt **`/usr/bin/python3 …`** statt **`/bin/bash …`** geschrieben; Pfad mit **`posixpath.basename`** + **`shlex.quote`** (`mixin_editor_cron.add_to_stable_cron`).
+
+### Entfernt
+
+- Browser-/Docker-Web-Stack (`web/`, `docker-compose.web.yml`, zugehörige Deploy-Doku und Skripte). Betrieb nur noch über die Desktop-App (`ugreen_nas_admin.py` / `öffentlich/`).
+
+## 22.3.0 — 2026-04-03
+
+### Neu / geändert
+
+- **NAS-Zentral-Wächter:** Python-Skript `ugreen_app/resources/nas_central_watch.py` — läuft **auf dem NAS** (Cron), prüft Speicher, RAID, Temperatur, **Docker** (exited/restarting/unhealthy, Pflicht-Container), optional **systemd failed**; Benachrichtigung per **Telegram**, **E-Mail** oder **beides**; optional **docker start** für konfigurierte Namen (mit Cooldown). Im Tab **System & Health:** Bereich zum Konfigurieren, **Auf NAS installieren** (nach `/volume1/scripts/`), **Test (--once)**. Lokale UI-Werte in `nas_watch_local.json` (gitignored).
+- **Docker:** **Stop** und **Restart** mit **zusätzlicher Bestätigung**; Container-Namen per `shlex.quote` an `docker` übergeben.
+
+### Build
+
+- PyInstaller: `datas` für `ugreen_app/resources/nas_central_watch.py`, Hidden Import `ugreen_app.mixin_nas_watch_deploy`.
+
+## 22.2.0 — 2026-04-01
+
+### Kurzüberblick
+
+Ausführlich im öffentlichen Baum: **`öffentlich/CHANGELOG.md`** (DE + EN) und **`öffentlich/README.md`**.
+
+- **Sicherheit:** Standard **eingeschränkter Modus**; Header-Button **„Volle Rechte“ / „Full access“** schaltet riskante Aktionen nach Bestätigung frei; **`mixin_safety_lock`**, **`_danger_gate()`**, **`RoundedButton.set_enabled`**.
+- **UI:** **Live-Monitor** (CPU gesamt + RAM) unten in der **Sidebar**; kompakter **Header** (eine Zeile Verbindungsfelder, SSH-Key-Pfad fester Breite, Hinweis mit dynamischem **wraplength**); rechte Buttons unten am Kopfbereich ausgerichtet; Startgeometrie **1500×1020**, **minsize** Breite **1260**.
+- **i18n:** neue Texte für Sicherheitsdialoge, Sidebar-Monitor, SSH-Key-Labels.
+- **Build:** PyInstaller **Hidden Import** `ugreen_app.mixin_safety_lock`.
+- **Doku:** README mit Screenshots **`images/1.png`–`6.png`**, Release-Paket unter **`öffentlich/release/UgreenNASAdmin_v22.2.0/`** (EXE + CHANGELOG + README.txt).
+
+## 22.1.0 — 2026-04-01
+
+### Verbessert (Kurzüberblick)
+
+Ausführlich im öffentlichen **`öffentlich/CHANGELOG.md`** und in **`öffentlich/README.md`** (u. a. *Verbindung zur NAS* mit **SSH-Port** und **SSH-Key**).
+
+- **SSH (`nas_ssh`):** `compress=True`; optional lokalisierte Status-/Fehlertexte (`i18n`); `run_ssh_cmd` übergibt Übersetzungen.
+- **UI:** Explorer Aufklappen + Suche im Thread; Docker Stats/Inspect/Logs asynchron; Docker-Überschriften über `i18n`.
+- **Sicherheit:** Kopfzeilen-Hinweis Klartext-JSON; **🔐 PW Tresor** + `keyring_helper`; optional `keyring`; Hidden Import in `.spec`.
+- **`nas_utils`:** `looks_like_ssh_error_output`, erweiterte Sanitize für EN-SSH-Fehler.
+- **Doku / GitHub:** README-Screenshots oben, Tresor-Anleitung, Verbindungstabelle; CHANGELOG 22.1.0 ausführlich.
+- **Tests:** `tests/test_nas_utils.py` erweitert (nur im privaten Baum).
+
+## 22.0.0 (Public) — 2026-03-30
+
+### Neu
+
+- Ordner **`öffentlich/`**: enthält alle zum **Starten** und **Bauen** der App nötigen Dateien (Release-Quelle für öffentliche Versionen). Siehe `öffentlich/README.md` — **Ordner nicht löschen**; bei Änderungen im Hauptprojekt Inhalt bei Bedarf spiegeln.
+- **Öffentliche Version** mit zweisprachiger Oberfläche **Deutsch / Englisch**.
+- **Sprach-Umschalter** `DE / EN` unten links in der Statusleiste; Umschalten lädt die UI neu (gleiche Session, Verbindungsdaten bleiben erhalten).
+- **Persistenz:** `ui_lang` wird in `nas_admin_connection.json` neben IP/User/Passwort gespeichert (beim „Verbindung speichern“ mit abgelegt).
+- **Übersetzungen** zentral in `ugreen_app/i18n.py` (UI-Texte, Cron-Klartext-Mappings, häufige Dialoge).
+- **Versionsnummer** und Fenstertitel nutzen die gleiche Quelle (`__version__`).
+- **NAS Explorer (Tab):** Zwei-Spalten-Ansicht (NAS-Baum / **Dieser PC**) zum **Hoch- und Herunterladen** sowie **Kopieren** zwischen NAS und lokalem Rechner — über Werkzeugleiste, Kontextmenü und Direktaktionen (z. B. Upload einzelner Dateien oder ganzer Ordner, „Auf NAS kopieren“ / „Auf PC kopieren“), inkl. Fortschrittsanzeige bei Übertragungen.
+
+### Geändert (gegenüber 21.2.0)
+
+- Hauptfenster, Sidebar, alle Tab-Bereiche (Scripts, Explorer, Docker, Health/Telegram, Speicher, ACL, Snapshots, Planer), Statuszeile und viele Meldungen sind **sprachabhängig**.
+- Cron-/Planer-Klartext und Combobox-Bezeichnungen folgen der gewählten Sprache.
+- Abgerundete Buttons (Pillow) unverändert nutzbar; PyInstaller: `ugreen_app.i18n` als Hidden Import ergänzt.
+
+### Hinweis
+
+- Einzelne tiefe Dialoge (z. B. einige Snapper/Btrfs-Eingaben) können noch deutsche Standardtexte zeigen; die zentralen Pfade sind übersetzt.
+
+---
+
+## 21.2.0 und älter
+
+- Vorherige Versionen ohne integrierte DE/EN-Umschaltung; siehe Git/Backup bzw. interne Release-Notizen.
