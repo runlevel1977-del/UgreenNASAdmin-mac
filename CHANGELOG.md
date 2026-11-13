@@ -1,8 +1,20 @@
 # Changelog — Ugreen NAS Admin
 
+## 23.8.81 — 2026-11-13
+
+Installer: `UgreenNASAdmin_setup_23.8.81.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt. Der Installer 23.8.80 ist zurückgezogen.
+
+### Deutsch
+
+- **Nach Updates suchen** liest nur das Mac-Repository und nur `UgreenNASAdmin_setup_*.pkg`. Die Windows-EXE wird nicht angefragt. Die Zertifikate kommen aus macOS, nicht aus einer Liste in der App. Ist nichts Neueres veröffentlicht, meldet die App den aktuellen Stand.
+
+### English
+
+- **Check for updates** reads only the Mac repository and only `UgreenNASAdmin_setup_*.pkg`. It does not ask for the Windows EXE. Certificates come from macOS, not from a list stored in the app. When nothing newer is published, the app reports the current version.
+
 ## 23.8.80 — 2026-11-13
 
-Installer: `UgreenNASAdmin_setup_23.8.80.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+Installer zurückgezogen. Ersatz: `UgreenNASAdmin_setup_23.8.81.pkg`. Die Update-Prüfung dieser Fassung hat die Windows-Version abgefragt.
 
 ### Deutsch
 
@@ -14,7 +26,7 @@ Installer: `UgreenNASAdmin_setup_23.8.80.pkg` (macOS). Eine vorhandene App auf d
 
 ## 23.8.79 — 2026-11-13
 
-Installer: `UgreenNASAdmin_setup_23.8.80.pkg` (macOS). Die Wunsch-Seite ist in diesem Installer enthalten.
+Die Wunsch-Seite ist in `UgreenNASAdmin_setup_23.8.81.pkg` enthalten.
 
 ### Deutsch
 

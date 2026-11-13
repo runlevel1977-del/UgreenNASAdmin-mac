@@ -20,24 +20,30 @@ The green **Code → Download ZIP** button downloads this README and the changel
 
 **Portable (One-Dir):** Settings and connection JSON files live beside `UgreenNASAdmin.exe` inside the `UgreenNASAdmin/` folder. After upgrading from an older one-file EXE, the app migrates existing config from the parent folder or `%LOCALAPPDATA%\UgreenNASAdmin\` on first start. **Window geometry** (size/position, taskbar-aware) is stored in `app_settings.json` → `window` (v23.8.42+).
 
-**Auto-update:** The Windows app downloads `UgreenNASAdmin_setup_*.exe` from [UgreenNASAdmin](https://github.com/runlevel1977-del/UgreenNASAdmin), verifies an **Ed25519 signature** (`.sig` asset, key embedded in the app), **signed update metadata** (installer identity + version), and the **SHA-256** digest, then runs the installer (ℹ Info → **Check for updates**). This Mac repository publishes `UgreenNASAdmin_setup_*.pkg` and does not replace that Windows update.
+**Auto-update:** On the Mac, Info → **Check for updates** reads only this repository and only `UgreenNASAdmin_setup_*.pkg`. It does not look at the Windows EXE. The Windows app still updates from [UgreenNASAdmin](https://github.com/runlevel1977-del/UgreenNASAdmin).
 
 ### Unreleased / upcoming
 
 - **Transfer Hub / Wake & Sync (UGOS):** Install/config offers up to **three** folder grants (required + optional 2/3, any volume). Folder picker includes **Home** (`/home/…/Photos`) without an SMB share; only `@…` system folders stay hidden. Transfer Hub **0.6.40** keeps every local route inside the selected volume when a profile is saved and again before `rsync` (symlink escapes rejected). Wake & Sync **0.1.50**. Security Hub **0.1.22** shows New and Confirm on first launch and renders login names as text. Bug reports: Technical Support on the app page, or `runlevel1977@posteo.de`.
 - **Deutsch:** Transfer Hub **0.6.40** hält jede lokale Route beim Speichern und vor `rsync` im gewählten Volume (auch nach Symlinks). Wake & Sync **0.1.50** — bis zu drei Ordner bei Installation/Config; Login-Setup mit Neu + Bestätigen. Security Hub **0.1.22** zeigt beim ersten Passwort Neu und Bestätigen, Anmeldenamen als Text. Details in [`CHANGELOG.md`](CHANGELOG.md).
 
+### What's new in v23.8.81
+
+- **Mac update check:** Info → Check for updates reads only this Mac repository and only the `.pkg`. The Windows EXE is not requested. Certificates come from macOS.
+- **Deutsch:** Nach Updates suchen fragt nur das Mac-Repository und nur das `.pkg`. Die Windows-EXE wird nicht gesucht.
+- **Installer:** `UgreenNASAdmin_setup_23.8.81.pkg`. Der Installer 23.8.80 ist zurückgezogen.
+
 ### What's new in v23.8.80
 
 - **Wish mail:** with SMTP saved under Settings, the app sends the message itself. On the Mac the system certificate is used. A failed send stays in the app and does not open the email program.
 - **Deutsch:** Steht SMTP in den Einstellungen, schickt die App den Wunsch selbst. Bei einem Fehler bleibt das E-Mail-Programm zu.
-- **Installer:** `UgreenNASAdmin_setup_23.8.80.pkg`. Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+- **Installer:** zurückgezogen, Ersatz ist `UgreenNASAdmin_setup_23.8.81.pkg`.
 
 ### What's new in v23.8.79
 
 - **App development and wishes:** left bar, directly under Settings. Numbered fields show what to type (name, reply email, kind of request, place in the app, the wish, optional screenshots). Small print asks for a clear description. **Send wish by email** goes to `ugna@posteo.de`. SMTP from Settings attaches the pictures; otherwise the email program opens.
 - **Deutsch:** Links unter Einstellungen liegt **App Entwicklung und Wünsche**. Die Felder sagen, was wohin gehört. Die Mail geht an `ugna@posteo.de`.
-- **Installer:** enthalten in `UgreenNASAdmin_setup_23.8.80.pkg`.
+- **Installer:** enthalten in `UgreenNASAdmin_setup_23.8.81.pkg`.
 
 ### What's new in v23.8.78
 
