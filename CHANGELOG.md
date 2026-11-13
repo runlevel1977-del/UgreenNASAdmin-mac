@@ -1,5 +1,29 @@
 # Changelog — Ugreen NAS Admin
 
+## 23.8.80 — 2026-11-13
+
+Installer: `UgreenNASAdmin_setup_23.8.80.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- **App Entwicklung und Wünsche** schickt die Mail selbst, wenn unter Einstellungen SMTP steht. Auf dem Mac wird dafür das System-Zertifikat benutzt. Schlägt der Versand fehl, bleibt das E-Mail-Programm zu und die App zeigt den Fehler. Das E-Mail-Programm öffnet sich nur noch, wenn kein SMTP-Server gespeichert ist.
+
+### English
+
+- **App development and wishes** sends the mail itself when SMTP is saved under Settings. On the Mac it uses the system certificate. If sending fails, the email program stays closed and the app shows the error. The email program opens only when no SMTP server is saved.
+
+## 23.8.79 — 2026-11-13
+
+Installer: `UgreenNASAdmin_setup_23.8.80.pkg` (macOS). Die Wunsch-Seite ist in diesem Installer enthalten.
+
+### Deutsch
+
+- Links unter Einstellungen gibt es **App Entwicklung und Wünsche**. Nummerierte Felder zeigen, was wohin gehört (Name, Antwort-Mail, Art, Stelle, Wunsch, Screenshot). Kleingedruckt steht, dass der Wunsch so klar wie möglich formuliert sein muss. **Wunsch per E-Mail senden** schickt die Nachricht an `ugna@posteo.de`. Mit SMTP aus den Einstellungen hängen die Bilder an. Ohne SMTP öffnet sich das E-Mail-Programm.
+
+### English
+
+- **App development and wishes** sits in the left bar under Settings. Numbered fields show what to fill in (name, reply email, kind, place, wish, screenshot). Small print asks for a description that is as clear as possible. **Send wish by email** delivers the message to `ugna@posteo.de`. With SMTP from Settings, pictures are attached. Without SMTP, the email program opens.
+
 ## 23.8.78 — 2026-11-09
 
 Installer: `UgreenNASAdmin_setup_23.8.78.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt.

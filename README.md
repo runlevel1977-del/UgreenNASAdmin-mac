@@ -27,6 +27,18 @@ The green **Code → Download ZIP** button downloads this README and the changel
 - **Transfer Hub / Wake & Sync (UGOS):** Install/config offers up to **three** folder grants (required + optional 2/3, any volume). Folder picker includes **Home** (`/home/…/Photos`) without an SMB share; only `@…` system folders stay hidden. Transfer Hub **0.6.40** keeps every local route inside the selected volume when a profile is saved and again before `rsync` (symlink escapes rejected). Wake & Sync **0.1.50**. Security Hub **0.1.22** shows New and Confirm on first launch and renders login names as text. Bug reports: Technical Support on the app page, or `runlevel1977@posteo.de`.
 - **Deutsch:** Transfer Hub **0.6.40** hält jede lokale Route beim Speichern und vor `rsync` im gewählten Volume (auch nach Symlinks). Wake & Sync **0.1.50** — bis zu drei Ordner bei Installation/Config; Login-Setup mit Neu + Bestätigen. Security Hub **0.1.22** zeigt beim ersten Passwort Neu und Bestätigen, Anmeldenamen als Text. Details in [`CHANGELOG.md`](CHANGELOG.md).
 
+### What's new in v23.8.80
+
+- **Wish mail:** with SMTP saved under Settings, the app sends the message itself. On the Mac the system certificate is used. A failed send stays in the app and does not open the email program.
+- **Deutsch:** Steht SMTP in den Einstellungen, schickt die App den Wunsch selbst. Bei einem Fehler bleibt das E-Mail-Programm zu.
+- **Installer:** `UgreenNASAdmin_setup_23.8.80.pkg`. Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
+### What's new in v23.8.79
+
+- **App development and wishes:** left bar, directly under Settings. Numbered fields show what to type (name, reply email, kind of request, place in the app, the wish, optional screenshots). Small print asks for a clear description. **Send wish by email** goes to `ugna@posteo.de`. SMTP from Settings attaches the pictures; otherwise the email program opens.
+- **Deutsch:** Links unter Einstellungen liegt **App Entwicklung und Wünsche**. Die Felder sagen, was wohin gehört. Die Mail geht an `ugna@posteo.de`.
+- **Installer:** enthalten in `UgreenNASAdmin_setup_23.8.80.pkg`.
+
 ### What's new in v23.8.78
 
 - **Mac wording:** On macOS the app says Mac / This Mac instead of PC / This PC. The Windows build is unchanged.
