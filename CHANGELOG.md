@@ -1,5 +1,21 @@
 # Changelog — Ugreen NAS Admin
 
+## 23.8.89 — 2026-11-21
+
+Installer: `UgreenNASAdmin_setup_23.8.89.pkg` (macOS). Die App kommt in den Ordner Programme. Eine vorhandene Kopie auf dem Schreibtisch wird ersetzt.
+
+### Deutsch
+
+- **NAS ↔ NAS auf dem Mac:** **Freigaben scannen** zeigt die Dateien des zweiten NAS. Die Abfrage läuft über das UGREEN, mit dem Host aus dem zweiten NAS-Profil. Das ist die Direktverbindung zwischen den beiden NAS (zum Beispiel 10.0.0.1), nicht die Adresse über den Router. Kopieren und Löschen gehen denselben Weg. Auf dem UGREEN muss `smbclient` installiert sein. Unter Windows bleibt die direkte SMB-Verbindung vom PC.
+- **Größen:** Unter Dateien und NAS ↔ NAS zeigt die Größenspalte Dateien und Ordner. Die Ordnergröße zählt den Inhalt mit und bleibt lesbar, auch wenn das Fenster geteilt ist.
+- **Zweites NAS:** **Freigaben scannen** liest jede Freigabe in einem Durchgang. Die angezeigte Größe wächst mit, auch mitten in einem großen Ordner. Ein Klick öffnet den Ordner sofort und wartet nicht auf die Zählung. Unten steht, welche Freigabe und welcher Ordner gerade gelesen werden.
+
+### English
+
+- **NAS ↔ NAS on the Mac:** **Scan shares** lists the second NAS. The UGREEN asks the host saved in the second-NAS profile. That host is the direct link between the two NAS devices (for example 10.0.0.1), not the address used through the router. Copy and delete use the same path. The UGREEN needs `smbclient` installed. On Windows, SMB is still opened directly from the PC.
+- **Sizes:** Files and NAS ↔ NAS show file sizes and folder sizes. A folder size includes everything inside it, and the column stays readable when the window is split.
+- **Second NAS:** **Scan shares** reads each share in one pass. The shown size keeps growing, including inside a large folder. A click opens the folder at once and does not wait for the count. The status line names the share and folder being read.
+
 ## 23.8.81 — 2026-11-13
 
 Installer: `UgreenNASAdmin_setup_23.8.81.pkg` (macOS). Eine vorhandene App auf dem Schreibtisch wird ersetzt. Der Installer 23.8.80 ist zurückgezogen.

@@ -27,6 +27,13 @@ The green **Code → Download ZIP** button downloads this README and the changel
 - **Transfer Hub / Wake & Sync (UGOS):** Install/config offers up to **three** folder grants (required + optional 2/3, any volume). Folder picker includes **Home** (`/home/…/Photos`) without an SMB share; only `@…` system folders stay hidden. Transfer Hub **0.6.40** keeps every local route inside the selected volume when a profile is saved and again before `rsync` (symlink escapes rejected). Wake & Sync **0.1.50**. Security Hub **0.1.22** shows New and Confirm on first launch and renders login names as text. Bug reports: Technical Support on the app page, or `runlevel1977@posteo.de`.
 - **Deutsch:** Transfer Hub **0.6.40** hält jede lokale Route beim Speichern und vor `rsync` im gewählten Volume (auch nach Symlinks). Wake & Sync **0.1.50** — bis zu drei Ordner bei Installation/Config; Login-Setup mit Neu + Bestätigen. Security Hub **0.1.22** zeigt beim ersten Passwort Neu und Bestätigen, Anmeldenamen als Text. Details in [`CHANGELOG.md`](CHANGELOG.md).
 
+### What's new in v23.8.89
+
+- **NAS ↔ NAS on the Mac:** **Scan shares** lists the second NAS through the UGREEN, using the host saved for that NAS (the direct link, for example 10.0.0.1). Copy and delete use the same path. The UGREEN needs `smbclient`.
+- **Sizes:** Files and NAS ↔ NAS show file and folder sizes, including everything inside a folder. On the second NAS, **Scan shares** reads each share in one pass. The size keeps growing while a large folder is still being read, and folders still open on click.
+- **Deutsch:** Unter NAS ↔ NAS zeigt **Freigaben scannen** das zweite NAS über das UGREEN. Datei- und Ordnergrößen stehen in der Spalte. Pro Freigabe ein Durchgang, die Größe wächst mit, Aufklappen bleibt möglich.
+- **Installer:** `UgreenNASAdmin_setup_23.8.89.pkg`. Eine vorhandene App auf dem Schreibtisch wird ersetzt.
+
 ### What's new in v23.8.81
 
 - **Mac update check:** Info → Check for updates reads only this Mac repository and only the `.pkg`. The Windows EXE is not requested. Certificates come from macOS.
@@ -185,7 +192,7 @@ The green **Code → Download ZIP** button downloads this README and the changel
 - **Settings SSH workflow:** create SSH key pair and install public key to UGREEN or second NAS/QNAP directly from the app. **TOFU host keys** (`ssh_known_hosts.json`) — first connect trusts the key; later changes are rejected (Settings → **Forget SSH host key**).
 - **Health improvements:** Scheduler inventory and expanded UGOS/service visibility.
 - **Updated screenshots:** `images/` now reflects the newest app state (latest captures provided by the maintainer).
-- **Version** **23.8.78** — see full details in [`CHANGELOG.md`](CHANGELOG.md).
+- **Version** **23.8.89** — see full details in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Repository layout
 
